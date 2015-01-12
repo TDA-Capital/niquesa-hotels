@@ -1,0 +1,47 @@
+@media screen and (max-width: 1024px) {	
+	.tablet-hidden {display: none !important;}
+	.tablet-only {display: block !important;}
+	.screensized,
+	.appstage > .container {height: auto; min-height: 100px;}
+	.container {width: auto;}
+	.slicknav_menu {display:block;}
+	
+	#header {height: 60px; background-color: #257bd2; text-align: right; }
+	#logo {position: absolute; top: 2px; left: 20px; }
+	#navigation {padding-right: 20px; display:none;}
+	#navigation .menu li {line-height: 60px; margin: 0 11px;}
+	#header .app-login-btn {position: absolute; top: 13px; right: 60px; margin-top: 0px;}
+	#footer {position: relative; left: auto; bottom: auto; height: auto; padding: 20px; width: auto;}
+	#footer .left {position: static; width: auto; margin: 0 0 20px; text-align: center;}
+	#footer .center {margin: 0;}
+	#footer .right {position: static; width: auto; margin: 0; text-align: center;}
+	.node,
+	.screensized,
+	.messages.error,
+	.appstage > .container {padding: 60px 20px;}
+	.view-content {padding-bottom: 60px;}
+	.node-homepage {padding: 60px 0px 0px;}
+	.view {padding: 0; text-align: center;}
+	
+	.homepage-section .hgroup {width: auto;}
+	.catch-release-animation {width: 100%; overflow: hidden;}
+	.catch-release-animation .catch-fish {left: 50%;}
+	.catch-release-animation .catch-hook {right: 50%;}
+	
+	.slideBtn.previous {left: 0px; margin-left: 0;}
+	.slideBtn.next {right: 0px; margin-right: 0;}
+	.field-collection-item-field-fish-species .field-name-field-fish-image {text-align: center;}
+	.field-collection-item-field-fish-species h3 {margin: 47px 0 0;}
+	.sect-contact .info-block {height: auto; background: none;}
+}
+@media screen and (min-width: 0px) and (max-width: 679px) {
+}
+@media screen and (max-width: 450px) {
+	.mobile-hidden {display: none !important;}
+	.mobile-only {display: block !important;}
+	
+	.tut-stage {margin-top: 0px;}
+}
+@media screen and (min-width: 680px) and (max-width: 1059px) {
+	.tablet-hidden {display: none !important;}	
+}

@@ -1,0 +1,51 @@
+<?php
+/**
+ * @file
+ * Provides a configuration interface for Google Tag Manager.
+ */
+
+
+/**
+ * Implement hook_permission().
+ */
+function niquesa_gtm_permission() {
+	return array(
+		'administer gtm configuration' => array(
+			'title' => t('Administer GTM'),
+			'description' => t('Administer the Niquesa GTM module configuration'),
+		),
+	);
+}
+
+
+/**
+ * Implement hook_menu().
+ */
+function niquesa_gtm_menu() {
+	return array(
+		'admin/config/niquesa-gtm' => array(
+			'title' => 'Niquesa GTM',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('niquesa_gtm_admin_form'),
+			'access arguments' => array('administer gtm configuration'),
+			'type' => MENU_NORMAL_ITEM,
+		)
+	);
+}
+
+
+/**
+ * Defines the admin form.
+ */
+function niquesa_gtm_admin_form() {
+	$form = array(
+		'niquesa_gtm_id' => array(
+			'#title' => t('Google Tag Manager ID'),
+			'#type' => 'textfield',
+			'#default_value' => variable_get('niquesa_gtm_id', ''),
+			'#required' => true,
+		),
+	);
+
+	return system_settings_form($form);
+}

@@ -1,0 +1,210 @@
+<?php
+/**
+ * @file
+ * Provides a press section page
+ */
+
+
+/**
+ * Implement hook_permission().
+ */
+function niquesa_browser_permission() {
+	return array(
+		'administer niquesa browser' => array(
+			'title' => t('Administer Niquesa Browser'),
+			'description' => t('Administer the Niquesa Browser module configuration'),
+		),
+	);
+}
+
+
+/**
+ * Implement hook_menu().
+ */
+function niquesa_browser_menu() {
+	return array(
+		'admin/config/niquesa/browser' => array(
+			'title' => 'Niquesa Browser',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('niquesa_browser_admin_form'),
+			'access arguments' => array('administer niquesa browser'),
+			'type' => MENU_LOCAL_ACTION,
+		),
+		'press' => array(
+			'title' => 'Press',
+			'page callback' => 'niquesa_browser_press_page',
+			'access callback' => true,
+			'type' => MENU_CALLBACK,
+		),
+	);
+}
+
+
+/**
+ * Implement hook_theme().
+ */
+function niquesa_browser_theme() {
+	return array(
+		'niquesa_browser_press_page' => array(
+			'variables' => array('form' => null, 'items' => null, 'breadcrumbs' => null),
+			'template' => 'niquesa-browser-press-page',
+		),
+		'niquesa_browser_access_form' => array(
+			'render element' => 'form',
+			'template' => 'niquesa-browser-access-form',
+		),
+	);
+}
+
+
+/**
+ * Implement hook_entity_info().
+ */
+function niquesa_browser_entity_info() {
+	return array(
+		'niquesa_browser_access' => array(
+			'label' => 'Niquesa Browser Access',
+			'controller class' => 'EntityAPIController',
+			'views controller class' => 'EntityDefaultViewsController',
+			'base table' => 'niquesa_browser_access',
+			'entity keys' => array(
+				'id' => 'aid',
+				'label' => 'name',
+			),
+		),
+	);
+}
+
+
+/**
+ * Admin form definition
+ */
+function niquesa_browser_admin_form() {
+	return system_settings_form(array(
+		'niquesa_browser_directory_path' => array(
+			'#title' => t('Directory path'),
+			'#type' => 'textfield',
+			'#description' => t('Path to a directory that will be used as a root of press section page'),
+			'#default_value' => variable_get('niquesa_browser_directory_path'),
+		),
+	));
+}
+
+
+/**
+ * The press page
+ */
+function niquesa_browser_press_page() {
+	drupal_page_is_cacheable(false);
+
+	if (empty($_COOKIE['press_access']))
+		return theme('niquesa_browser_press_page', array(
+			'form' => drupal_get_form('niquesa_browser_access_form')
+		));
+
+	$args = arg();
+	array_shift($args);
+
+	$breadcrumbs = array();
+	foreach ($args as $i => $arg) {
+		$breadcrumbs[] = array(
+			'url' => implode('/', array_merge(
+				array('press'),
+				array_slice($args, 0, $i + 1)
+			)),
+			'title' => ucwords(str_replace('-', ' ', preg_replace('/^\\d+\\./', '', $arg))),
+			'arguments' => array(),
+		);
+		if ($i == count($args) - 1)
+			$breadcrumbs[$i]['arguments']['attributes'] = array(
+				'class' => array('selected'),
+			);
+	}
+
+	$image_types = array('jpg', 'jpeg', 'png', 'gif', 'bmp');
+	$base_path = variable_get('niquesa_browser_directory_path');
+	$iterator = new DirectoryIterator($base_path . '/' . implode('/', $args));
+
+	$items = array();
+	foreach ($iterator as $file) {
+		if ($file->isDot())
+			continue;
+
+		if ($file->isDir())
+			$type = 'folder';
+		elseif (in_array($file->getExtension(), $image_classes))
+			$type = 'image';
+		else
+			$type = 'document';
+
+		$item = array(
+			'is_directory' => $file->isDir(),
+			'real_name' => $file->getFilename(),
+			'name' => preg_replace('/^\\d+\\./', '', $file->getFilename()),
+			'path' => $file->getPathname(),
+			'type' => $type,
+			'arguments' => array(),
+		);
+
+		if ($file->isDir())
+			$item['path'] = str_replace($base_path, 'press', $item['path']);
+		else
+			$item['arguments'] = array(
+				'attributes' => array(
+					'target' => '_blank',
+				),
+			);
+		$items[] = $item;
+	}
+
+	usort($items, function($a, $b) {
+		return ($b['is_directory'] - $a['is_directory']) ?: strcmp($a['real_name'], $b['real_name']);
+	});
+
+	return theme('niquesa_browser_press_page', array(
+		'items' => $items,
+		'breadcrumbs' => $breadcrumbs,
+	));
+}
+
+
+/**
+ * Access form definition
+ */
+function niquesa_browser_access_form() {
+	return array(
+		'#action' => 'press',
+		'#method' => 'post',
+		'#theme' => 'niquesa_browser_access_form',
+		'access_name' => array(
+			'#title' => t('Name'),
+			'#type' => 'textfield',
+		),
+		'access_email' => array(
+			'#title' => t('E-mail'),
+			'#type' => 'textfield',
+		),
+		'access_submit' => array(
+			'#type' => 'submit',
+			'#value' => t('Send'),
+			'#attributes' => array('class' => array('a-button', 'orange')),
+		),
+	);
+}
+
+
+/**
+ * Submit callback for access form
+ */
+function niquesa_browser_access_form_submit($form, &$form_state) {
+	$access = entity_create('niquesa_browser_access', array(
+		'name' => $form_state['values']['access_name'],
+		'email' => $form_state['values']['access_email'],
+	));
+	entity_save('niquesa_browser_access', $access);
+
+	$expire = new DateTime('now +1 month');
+	setcookie('press_access', $access->aid, $expire->getTimestamp(), '/');
+
+	$form_state['redirect'] = 'press';
+}

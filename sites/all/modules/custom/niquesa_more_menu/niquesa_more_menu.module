@@ -1,0 +1,151 @@
+<?php
+/**
+ * @file
+ * Provides a configuration interface for Niquesa More Menu.
+ */
+
+
+/**
+ * Implement hook_permission().
+ */
+function niquesa_more_menu_permission() {
+	return array(
+		'administer niquesa more menu configuration' => array(
+			'title' => t('Administer more menu'),
+			'description' => t('Administer the Niquesa more menu module configuration'),
+		),
+	);
+}
+
+
+/**
+ * Implement hook_menu().
+ */
+function niquesa_more_menu_menu() {
+	return array(
+		'admin/config/niquesa-more-menu' => array(
+			'title' => 'Niquesa More Menu',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('niquesa_more_menu_admin_form'),
+			'access arguments' => array('administer niquesa more menu configuration'),
+			'type' => MENU_NORMAL_ITEM,
+		)
+	);
+}
+
+
+/**
+ * Implement hook_theme().
+ */
+function niquesa_more_menu_theme() {
+	return array(
+		'niquesa_more_menu_admin_form' => array(
+			'render element' => 'form',
+		),
+	);
+}
+
+
+/**
+ * Theme function rendering the admin form as a table.
+ */
+function theme_niquesa_more_menu_admin_form($variables) {
+	$form = $variables['form'];
+	$hotels = _niquesa_more_menu_get_hotels();
+	$languages = language_list();
+
+	$header = array(
+		t('Hotel name'),
+	);
+
+	foreach ($languages as $language)
+		$header[] = $language->name;
+
+	foreach (element_children($form['niquesa_more_menu_config']) as $tnid) {
+		if (!array_key_exists($tnid, $hotels))
+			continue;
+		$row = array($hotels[$tnid]->title);
+		foreach (element_children($form['niquesa_more_menu_config'][$tnid]) as $language)
+			$row[] = render($form['niquesa_more_menu_config'][$tnid][$language]);
+		$rows[] = $row;
+	}
+
+	$output = theme('table', compact('header', 'rows'));
+	foreach (element_children($form) as $child)
+		$output .= render($form[$child]);
+
+	return $output;
+}
+
+
+/**
+ * Defines the admin form.
+ */
+function niquesa_more_menu_admin_form() {
+	$hotels = _niquesa_more_menu_get_hotels();
+
+	$menu_blocks = module_invoke('menu_block', 'block_info');
+
+	foreach ($menu_blocks as $id => $block)
+		$menu_blocks[$id] = $block['info'];
+
+	$form = array(
+		'#theme' => 'niquesa_more_menu_admin_form',
+		'niquesa_more_menu_config' => array(
+			'#type' => 'container',
+			'#tree' => true,
+		),
+	);
+
+	$config = variable_get('niquesa_more_menu_config');
+
+	foreach ($hotels as $hotel) {
+		$variable = "niquesa_more_menu_{$hotel->tnid}_{$hotel->language}";
+		$form['niquesa_more_menu_config'][$hotel->tnid][$hotel->language] = array(
+			'#type' => 'select',
+			'#options' => $menu_blocks,
+			'#default_value' => $config[$hotel->tnid][$hotel->language],
+		);
+	}
+
+	return system_settings_form($form);
+}
+
+
+/**
+ * Helper function for template. Returns a menu_block ID for a given hotel and language
+ *
+ * @param integer $hotel_nid
+ *   Node ID of the hotel to look up.
+ *
+ * @param string $language
+ *   Language code to fetch the menu_block for.
+ */
+function niquesa_more_menu_get_menu_block_id($hotel_nid, $language) {
+	$translations = translation_node_get_translations($hotel_nid);
+	if (isset($translations[$language])) {
+		$menu_config = variable_get('niquesa_more_menu_config');
+		return $menu_config[$translations[$language]->nid][$language];
+	}
+}
+
+
+/**
+ * Internal function that fetches all hotel nodes. They are stored in a static variable to avoid multiple DB queries.
+ */
+function _niquesa_more_menu_get_hotels() {
+	static $hotels = null;
+	if ($hotels === null) {
+		$query = new EntityFieldQuery();
+
+		$results = $query
+			->entityCondition('entity_type', 'node')
+			->entityCondition('bundle', 'hotel')
+			->propertyCondition('status', 1)
+			->propertyOrderBy('language', 'asc')
+			->execute();
+
+		$hotels = node_load_multiple(array_keys($results['node']));
+	}
+	return $hotels;
+}

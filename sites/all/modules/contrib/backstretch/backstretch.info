@@ -1,0 +1,10 @@
+name = Backstretch
+description = Integrates the jQuery Backstretch plugin.
+core = 7.x
+
+; Information added by  packaging script on 2013-11-20
+version = "7.x-2.x-dev"
+core = "7.x"
+project = "backstretch"
+datestamp = "1384958005"
+

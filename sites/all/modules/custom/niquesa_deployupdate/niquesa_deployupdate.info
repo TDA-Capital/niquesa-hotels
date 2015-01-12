@@ -1,0 +1,4 @@
+name = Niquesa Deploy Update
+description = General purpose module to write generic update hooks for the Niquesa build
+package = Niquesa
+core = 7.x

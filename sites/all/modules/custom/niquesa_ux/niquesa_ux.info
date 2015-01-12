@@ -1,0 +1,4 @@
+name = Niquesa UX
+description = Theme independent ux stuff
+package = Niquesa
+core = 7.x

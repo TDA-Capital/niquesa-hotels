@@ -1,0 +1,67 @@
+<?php
+/**
+ * Implement hook_schema().
+ */
+function niquesa_signup_schema() {
+	return array(
+		'niquesa_signup_user' => array(
+			'fields' => array(
+				'uid' => array(
+					'type' => 'serial',
+					'unsigned' => true,
+					'not null' => true,
+				),
+				'name' => array(
+					'type' => 'varchar',
+					'length' => 255,
+					'not null' => true,
+					'default' => '',
+				),
+				'email' => array(
+					'type' => 'varchar',
+					'length' => 255,
+					'not null' => true,
+					'default' => '',
+				),
+			),
+			'unique keys' => array(
+				'email' => array('email'),
+			),
+			'primary key' => array('uid'),
+		),
+	);
+}
+
+
+/**
+ * Create the table for user signups
+ */
+function niquesa_signup_update_7100() {
+	db_create_table('niquesa_signup_user', array(
+		'fields' => array(
+			'uid' => array(
+				'type' => 'serial',
+				'unsigned' => true,
+				'not null' => true,
+			),
+			'name' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => true,
+				'default' => '',
+			),
+			'email' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => true,
+				'default' => '',
+			),
+		),
+		'unique keys' => array(
+			'email' => array('email'),
+		),
+		'primary key' => array('uid'),
+	));
+	# Rebuild the schema, so further hooks (entity_info) don't break.
+	drupal_get_schema('niquesa_signup_user', true);
+}

@@ -1,0 +1,6 @@
+name = Niquesa Browser
+description = Provides a press section page that displays files in directories
+package = Niquesa
+core = 7.x
+version = 7.x-1.0
+configure = admin/config/niquesa/browser

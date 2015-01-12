@@ -1,0 +1,70 @@
+<?php
+function niquesa_config_permission() {
+	return array(
+		'manage niquesa config' => array(
+			'title' => 'Manage Niquesa config',
+			'description' => 'Administer Niqusa configuration',
+		),
+	);
+}
+
+function niquesa_config_menu() {
+	return array(
+		'admin/config/niquesa' => array(
+			'title' => 'Niquesa Configuration',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('niquesa_config_admin_form'),
+			'access arguments' => array('manage niquesa config'),
+			'type' => MENU_NORMAL_ITEM,
+		),
+	);
+}
+
+function niquesa_config_admin_form() {
+	global $language;
+	$form = array(
+		'niquesa_config_group_address_title' => array(
+			'#type' => 'item',
+			'#title' => t('Group address settings'),
+		),
+		'niquesa_config_group_address' => array(
+			'#type' => 'vertical_tabs',
+			'#tree' => true,
+		),
+	);
+
+	$config = variable_get('niquesa_config_group_address', array());
+
+	foreach (language_list() as $l) {
+		$address = isset($config[$l->language]) ? $config[$l->language] : array();
+
+		$form['niquesa_config_group_address'][$l->language] = array(
+			'#title' => $l->name,
+			'#type' => 'fieldset',
+			'#collapsible' => true,
+			'#collapsed' => $l->language != $language->language,
+			'address' => array(
+				'#title' => t('Address'),
+				'#type' => 'textfield',
+				'#default_value' => isset($address['address']) ? $address['address'] : '',
+			),
+			'city' => array(
+				'#title' => t('City'),
+				'#type' => 'textfield',
+				'#default_value' => isset($address['city']) ? $address['city'] : '',
+			),
+			'phone' => array(
+				'#title' => t('Phone'),
+				'#type' => 'textfield',
+				'#default_value' => isset($address['phone']) ? $address['phone'] : '',
+			),
+			'email' => array(
+				'#title' => t('Email'),
+				'#type' => 'textfield',
+				'#default_value' => isset($address['email']) ? $address['email'] : '',
+			),
+		);
+	}
+
+	return system_settings_form($form);
+}

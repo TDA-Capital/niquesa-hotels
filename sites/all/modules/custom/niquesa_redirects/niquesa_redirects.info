@@ -1,0 +1,5 @@
+name = Niquesa Redirects
+description = Handles language redirects for complex cases
+package = Niquesa
+core = 7.x
+version = 7.x-1.0

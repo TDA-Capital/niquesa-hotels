@@ -1,0 +1,456 @@
+<?php
+/**
+* @file
+* Niquesa Util sandbox for developers
+*
+* anything to do with testing out the Drupal API can go in here.
+*
+* This module should not be enabled on live!
+*/
+
+/*
+ *
+ * language aware menu navigation links:
+ * http://api.drupalize.me/api/drupal/function/i18n_menu_navigation_links/7
+ * function i18n_menu_navigation_links($menu_name, $level = 0)
+ *
+ *
+ *
+ *
+ */
+
+
+/*
+ * Implements hook_menu()
+ * 
+ */
+function niquesa_util_menu() {
+   
+  $items=array();
+  $items['admin/dev/testoutput'] = array (
+    'title'=>'',
+    'type' => MENU_CALLBACK,
+    'page callback' => 'niquesa_util_testoutput',
+    'access arguments' => array('administer site configuration')
+  );
+  
+  $items['admin/dev/testoffers'] = array (
+    'title'=>'',
+    'type' => MENU_CALLBACK,
+    'page callback' => 'niquesa_util_testoffers',
+    'access arguments' => array('administer site configuration')
+  );
+  
+  $items['admin/dev/testhighlights'] = array (
+    'title'=>'',
+    'type' => MENU_CALLBACK,
+    'page callback' => 'niquesa_util_testhighlights',
+    'access arguments' => array('administer site configuration')
+  );
+    
+  $items['dev/testoutput'] = array (
+    'title'=>'',
+    'type' => MENU_CALLBACK,
+    'page callback' => 'niquesa_util_testoutput',
+    'access arguments' => array('administer site configuration')
+  );
+    
+return $items;
+}
+
+function niquesa_util_image_style($variables) {
+  
+  $dimensions = array(
+    'width' => $variables['width'],
+    'height' => $variables['height'],
+  );
+
+  image_style_transform_dimensions($variables['style_name'], $dimensions);
+
+  $variables['width'] = $dimensions['width'];
+  $variables['height'] = $dimensions['height'];
+
+  // Determine the URL for the styled image.
+  $variables['path'] = image_style_url($variables['style_name'], $variables['path']);
+  
+  
+  return $variables;
+  
+  
+}
+
+
+function niquesa_util_testhighlights() {
+
+global $language;
+
+locale("Hotel","");
+locale("More","");
+locale("Explore Niquesa","");
+locale("Niquesa Hotels","");
+
+locale("Choose hotel","");
+locale("PROMOTIONS","");
+locale("Learn More","");
+locale("Hotel Highlights","");
+locale("Suites & Offers","");
+locale("Destination Highlights","");
+locale("View On Map","");
+locale("View Details","");
+locale("Culinary Highlights","");
+
+$hotel_nid=23;
+$language->language="en";
+
+$query = new EntityFieldQuery();
+
+$query->entityCondition('entity_type','node')
+				->entityCondition('bundle', array('promotion'))
+				->propertyCondition('status',1)
+				->propertyCondition('language', $language->language)
+				->fieldCondition('field_hotel','target_id',$hotel_nid,'=')
+				->propertyOrderBy('created', 'DESC');
+	
+$result = $query->execute();
+$promotions = node_load_multiple(array_keys($result['node']), '' );
+
+krumo($promotions);								
+
+$query = new EntityFieldQuery();
+ 
+$query->entityCondition('entity_type','node')
+    ->propertyCondition('status',1)
+    ->propertyCondition('type',array('facilities','bar','restaurant'))
+		->propertyCondition('language', $language->language)
+    ->fieldCondition('field_hotel','target_id',$hotel_nid,'=')
+    ->fieldCondition('field_display_on_hotel_home_page','value',1,'=')
+    ->range(0,3);
+	
+$result = $query->execute();
+$nodes = node_load_multiple(array_keys($result['node']), '' );
+krumo ($nodes);
+
+$query = new EntityFieldQuery();
+
+$query->entityCondition('entity_type','node')
+    ->propertyCondition('status',1)
+    ->propertyCondition('type','event')
+		->propertyCondition('language', $language->language)
+    ->fieldCondition('field_hotel','target_id',$hotel_nid,'=')
+    ->fieldCondition('field_display_on_hotel_home_page','value',1,'=')
+    ->range(0,3);
+	
+$result = $query->execute();
+$nodes = node_load_multiple(array_keys($result['node']), '' );
+krumo ($nodes);
+
+$query = new EntityFieldQuery();
+$query->entityCondition('entity_type','node')
+    ->propertyCondition('status',1)
+    ->propertyCondition('type','destination')
+		->propertyCondition('language', $language->language)
+    ->fieldCondition('field_hotel','target_id',$hotel_nid,'=')
+    ->fieldCondition('field_display_on_hotel_home_page','value',1,'=')
+    ->range(0,3);
+    
+$result = $query->execute();
+$nodes = node_load_multiple(array_keys($result['node']), '' );
+krumo ($nodes);
+
+
+//locale("Discover More","");
+
+$content_types=array("bar","restaurant");
+
+$query = new EntityFieldQuery();
+ 
+$query->entityCondition('entity_type','node')
+    ->propertyCondition('status',1)
+    ->propertyCondition('type',$content_types)
+		->propertyCondition('language', $language->language)
+    ->fieldCondition('field_hotel','target_id',$hotel_nid,'=');
+
+	
+$result = $query->execute();
+$nodes = node_load_multiple(array_keys($result['node']), '' );
+krumo ($nodes);
+
+
+
+	$query = new EntityFieldQuery();	
+	if ($hotel_nid>0) {
+	$query->entityCondition('entity_type','node')
+    ->propertyCondition('status',1)
+    ->propertyCondition('type','event')
+		->propertyCondition('language', $language->language)
+    ->fieldCondition('field_hotel','target_id',$hotel_nid,'=');
+	}
+	
+	$result = $query->execute();
+	$result_nodes = node_load_multiple(array_keys($result['node']), '' );
+	
+krumo($nodes);
+
+
+	$query = new EntityFieldQuery();	
+	if ($hotel_nid>0) {
+	$query->entityCondition('entity_type','node')
+    ->propertyCondition('status',1)
+    ->propertyCondition('type','destination')
+		->propertyCondition('language', $language->language)
+    ->fieldCondition('field_hotel','target_id',$hotel_nid,'=');
+	}
+	
+	$result = $query->execute();
+	$result_nodes = node_load_multiple(array_keys($result['node']), '' );
+	
+krumo ($nodes);
+
+
+
+// find the rooms associated with this hotel nid
+	$query = new EntityFieldQuery();
+  $query->entityCondition('entity_type','node')
+  ->propertyCondition('status',1)
+  ->propertyCondition('type',array('suites_and_rooms_landing_page'))
+	->propertyCondition('language', $language->language)
+  ->fieldCondition('field_hotel','target_id',$hotel_nid,'=');
+
+	$result = $query->execute();
+	$nodes = node_load_multiple(array_keys($result['node']), '' );
+	$counter=0;
+	krumo($nodes);
+foreach ($nodes as $node) {
+  $hero_image_uri=$node->field_suite_hero_image["und"][0]["uri"];    
+  $hero_image_path=file_create_url($hero_image_uri);
+?>
+<img class="background-img hide" src="<?php print $hero_image_path; ?>" />
+<?php
+}
+
+
+		
+// find the rooms associated with this hotel nid
+	$query = new EntityFieldQuery();
+  $query->entityCondition('entity_type','node')
+  ->propertyCondition('status',1)
+  ->propertyCondition('type',array('room'))
+	->propertyCondition('language', $language->language)
+  ->fieldCondition('field_hotel','target_id',$hotel_nid,'=')
+  ->fieldCondition('field_room_type','value','Room','=');
+	$result = $query->execute();
+	$nodes = node_load_multiple(array_keys($result['node']), '' );
+	$counter=0;
+	krumo($nodes);
+
+print "<ul>";
+foreach ($nodes as $node) {
+    if ($counter==count($nodes)) {
+      $closing_markup="</a></li>";  
+    } else {
+      $closing_markup="</a><span>/</span></li>";
+    }
+    $room_url = drupal_get_path_alias("node/".$node->nid);
+    print "<li><a href='".$room_url."'><strong>".$node->title." (".$node->field_number_of_rooms["und"][0]["value"].") </strong>";
+    print $closing_markup;
+    }
+print "</ul>";
+
+// find the rooms associated with this hotel nid
+	$query = new EntityFieldQuery();
+  $query->entityCondition('entity_type','node')
+  ->propertyCondition('status',1)
+  ->propertyCondition('type',array('room'))
+	->propertyCondition('language', $language->language)
+  ->fieldCondition('field_hotel','target_id',$hotel_nid,'=')
+  ->fieldCondition('field_room_type','value','Suite','=');
+	$result = $query->execute();
+	$nodes = node_load_multiple(array_keys($result['node']), '' );
+	$counter=0;
+	krumo($nodes);
+
+print "<ul>";
+foreach ($nodes as $node) {
+    if ($counter==count($nodes)) {
+      $closing_markup="</a></li>";  
+    } else {
+      $closing_markup="</a><span>/</span></li>";
+    }
+    $room_url = drupal_get_path_alias("node/".$node->nid);
+    print "<li><a href='".$room_url."'><strong>".$node->title." (".$node->field_number_of_rooms["und"][0]["value"].") </strong>";
+    print $closing_markup;
+    }
+print "</ul>";
+
+
+
+ 
+ $language->language="it";
+ $traveller_terms=niquesa_ux_taxonomyterms("traveller");
+ 
+ foreach ($traveller_terms as $term_class=>$term_name) {
+  
+  print $term_class." ".$term_name."<br />";
+  
+ }
+ 
+ 
+	$query = new EntityFieldQuery();
+	$result = $query->entityCondition('entity_type', 'taxonomy_term')
+                ->entityCondition('bundle', 'interest')
+								->propertyCondition('language', "en")
+                ->execute();
+	
+	$result= $query->execute();
+	$terms = taxonomy_term_load_multiple(array_keys($result['taxonomy_term']));
+
+	$english_terms=array();
+	
+  foreach ($terms as $term) {
+    $english_terms[]=$term->name;
+	}
+  
+	// get the localised terms
+	$query = new EntityFieldQuery();
+	$result = $query->entityCondition('entity_type', 'taxonomy_term')
+                ->entityCondition('bundle', 'interest')
+								->propertyCondition('language', $language->language)
+                ->execute();
+	
+	$result= $query->execute();
+	$terms = taxonomy_term_load_multiple(array_keys($result['taxonomy_term']));
+  $localised_terms=array();
+ $counter=0;
+  foreach($terms as $term) {
+   $english_term_name=$english_terms[$counter];
+   $term_class=$english_term_name;
+   $term_class=str_replace("&","and",$term_class);
+	 $term_class=str_replace(" ","-",$term_class);
+	 $term_class=strtolower($term_class);
+	 $term_name_upper=str_replace("&","&amp;",$term->name);
+	 $term_name_upper=strtoupper($term_name_upper);
+   print "<br />".$term_class."<br />".$term_name_upper."<br />";   
+  $counter++;
+  }
+
+  
+$language->language="en";  
+// grab a experience landing page without a hotel specified 
+// grab all featured experiences
+
+$query = new EntityFieldQuery();
+
+$query->entityCondition('entity_type','node')
+			->entityCondition('bundle', array('experience'))
+			->propertyCondition('status',1)
+			->propertyCondition('language', $language->language)
+      ->fieldCondition('field_featured_experience', 'value', array('Featured'))
+      ->propertyOrderBy('created', 'DESC');
+		
+$result = $query->execute();
+$experience_nodes = node_load_multiple(array_keys($result['node']), '' );
+
+
+foreach ($experience_nodes as $experience_node) {
+
+krumo($experience_node->title);
+	
+	foreach ($experience_node->field_interest_tags['und'] as $key=>$value) {
+		krumo ($key);
+		krumo($value["tid"]);
+		$x=taxonomy_term_load($value["tid"]);
+		krumo($x->name);
+	}	
+krumo("------");
+
+  }
+
+  
+}       
+  
+
+
+
+
+function niquesa_util_hotel_array() {
+ global $language;
+ $query = new EntityFieldQuery();
+  
+	$query->entityCondition('entity_type','node')
+    ->propertyCondition('status',1)
+    ->propertyCondition('type',array('hotel'))
+		->propertyCondition('language', $language->language)
+    ->propertyOrderBy('title','ASC');
+
+    $result = $query->execute();
+    $nodes = node_load_multiple(array_keys($result['node']), '' );
+		$counter=0;
+  
+    $hotel=array();
+    foreach ($nodes as $node) {
+    $hotel[$node->title]["path"]=drupal_get_path_alias("node/".$node->nid);
+  	}
+	
+  return $hotel;
+}
+
+
+function niquesa_util_testoffers() {
+  global $language;
+ 	
+  // get the hotel entity ref of the highlights landing page
+	$hotel_nid=23;
+		
+		
+	// find the the offers associted with this hotel nid
+	$query = new EntityFieldQuery();
+  $query->entityCondition('entity_type','node')
+  ->propertyCondition('status',1)
+  ->propertyCondition('type',array('offers'))
+	->propertyCondition('language', $language->language)
+  ->fieldCondition('field_hotel','target_id',$hotel_nid,'=');
+  
+	$result = $query->execute();
+	$nodes = node_load_multiple(array_keys($result['node']), '' );
+	$counter=0;
+	krumo($nodes);
+  foreach ($nodes as $node) {	
+		
+	$image_uri=$node->field_offer_image["und"][0]["uri"];    
+  $image_path=file_create_url($image_uri);
+  $vars["offers"][$counter]["nights"] = $node->field_offer_number_of_nights["und"][0]["value"];
+	$vars["offers"][$counter]["image"] = $image_path;
+	$vars["offers"][$counter]["offer_title"] = $node->title;
+	
+	$counter++;
+	}
+	
+}
+
+
+function niquesa_util_testoutput() {
+$menu_name="menu-more";
+$level=1;
+
+  $config = menu_block_get_config(2);
+  $data = menu_tree_block_data($config);
+
+  menu_tree_add_active_path($data);
+  print drupal_render(menu_tree_output($data));
+
+}
+
+
+
+
+function _niquesa_util_log($something) {
+// a debug logger - writes to php error log
+  if($_SERVER["SERVER_ADDR"]=="127.0.0.1") {
+    $error_log=variable_get("file_directory_path",conf_path()."/files")."/niquesa_error.log";
+    ini_set("error_log",$error_log);
+    ob_start();
+    print_r($something);
+    $fdlog=ob_get_clean();
+    error_log($fdlog);
+  }
+}

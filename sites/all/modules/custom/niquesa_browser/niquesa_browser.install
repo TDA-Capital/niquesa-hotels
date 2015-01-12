@@ -1,0 +1,61 @@
+<?php
+/**
+ * Implement hook_schema().
+ */
+function niquesa_browser_schema() {
+	return array(
+		'niquesa_browser_access' => array(
+			'fields' => array(
+				'aid' => array(
+					'type' => 'serial',
+					'unsigned' => true,
+					'not null' => true,
+				),
+				'name' => array(
+					'type' => 'varchar',
+					'length' => 255,
+					'not null' => true,
+					'default' => '',
+				),
+				'email' => array(
+					'type' => 'varchar',
+					'length' => 255,
+					'not null' => true,
+					'default' => '',
+				),
+			),
+			'primary key' => array('aid'),
+		),
+	);
+}
+
+
+/**
+ * Create the table for user signups
+ */
+function niquesa_browser_update_7100() {
+	db_create_table('niquesa_browser_access', array(
+		'fields' => array(
+			'aid' => array(
+				'type' => 'serial',
+				'unsigned' => true,
+				'not null' => true,
+			),
+			'name' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => true,
+				'default' => '',
+			),
+			'email' => array(
+				'type' => 'varchar',
+				'length' => 255,
+				'not null' => true,
+				'default' => '',
+			),
+		),
+		'primary key' => array('aid'),
+	));
+	# Rebuild the schema, so further hooks (entity_info) don't break.
+	drupal_get_schema('niquesa_browser_access', true);
+}

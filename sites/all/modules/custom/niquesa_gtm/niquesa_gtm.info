@@ -1,0 +1,4 @@
+name = Niquesa GTM
+description = Provides configuration for Google Tag Manager.
+package = Niquesa
+core = 7.x

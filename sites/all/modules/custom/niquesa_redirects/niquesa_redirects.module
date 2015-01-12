@@ -1,0 +1,41 @@
+<?php
+function niquesa_redirects_init() {
+	if (!function_exists('language_url_split_prefix'))
+		return;
+
+	$languages = language_list();
+
+	list($language, $path) = language_url_split_prefix(substr($_SERVER['REQUEST_URI'], 1), $languages);
+
+	if (!$language)
+		$language = language_default();
+
+	if (!drupal_lookup_path('source', $path, $language->language)) {
+		foreach ($languages as $code => $l) {
+			# Skip the language we already checked
+			if ($code == $language->language)
+				continue;
+
+			$source = drupal_lookup_path('source', $path, $l->language);
+
+			# Source path not found for this language? Try the next one.
+			if (!$source)
+				continue;
+
+			$args = explode('/', $source);
+
+			# Not a node path? Can't do much about it...
+			if ($args[0] != 'node' || !ctype_digit($args[1]))
+				continue;
+
+
+			$translations = translation_node_get_translations($args[1]);
+
+			# Couldn't find a translation for this one? That's bad.
+			if (!isset($translations[$language->language]))
+				continue;
+
+			drupal_goto("node/{$translations[$language->language]->nid}", array('language' => $language), 301);
+		}
+	}
+}

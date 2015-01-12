@@ -1,0 +1,201 @@
+<?php
+/**
+* @file
+* Niquesa Blob module
+*
+* This defines blobs of HTML , or "modules" that are used by more than 
+* one content type.. e.g. the Occasions Landing Page and the Business Landing Page both have the same blobs of content e.g. function room slider etc etc
+*/
+
+
+function niquesa_blob_theme() {
+	$path = drupal_get_path('theme', 'niquesa_zen') . '/templates';
+	return array(
+			'niquesa_blob_group_function_rooms_christmas' => array(
+			'path' => $path,
+			'template' => 'niquesa-blob-group-function-rooms-christmas',
+			'variables' => array(
+				'hotels' => null,
+				'features' => null,
+				'slider_images' => null,
+				'path' => null,
+				'book_event_label' => null,
+			),
+		),
+		'niquesa_blob_group_function_rooms' => array(
+			'path' => $path,
+			'template' => 'niquesa-blob-group-function-rooms',
+			'variables' => array(
+				'hotels' => null,
+				'features' => null,
+				'slider_images' => null,
+				'path' => null,
+				'book_event_label' => null,
+			),
+		),
+		'niquesa_blob_function_rooms' => array(
+			'path' => $path,
+			'template' => 'niquesa-blob-function-rooms',
+			'variables' => array(
+				'function_rooms' => null,
+				'hotel_nid' => null,
+				'features' => null,
+				'book_event_label' => null,
+			),
+		),
+		'niquesa_blob_catering' => array(
+			'path' => $path,
+			'template' => 'niquesa-blob-catering',
+			'variables' => array(
+				'catering_nodes' => null,
+				'hotel_nid' => null,
+				'parent_node' => null,
+				'book_event_label' => null,
+				'webform' => null,
+			),
+		),
+		'niquesa_blob_offers' => array(
+			'path' => $path,
+			'template' => 'niquesa-blob-offers',
+			'variables' => array(
+				'offers_nodes' => null,
+				'hotel_nid' => null,
+			),
+		),
+	);
+}
+
+
+function niquesa_blob_function_rooms_output(array $args=array()) {
+	global $language;
+
+	$query = new EntityFieldQuery();
+
+	$query->entityCondition('entity_type', 'node')
+		->entityCondition('bundle', 'function_rooms')
+		->propertyCondition('status', 1)
+		->propertyCondition('language', $language->language)
+		->fieldCondition('field_hotel', 'target_id', $args['hotel_nid']);
+
+	$result = $query->execute();
+
+	$args['function_rooms'] = node_load_multiple(array_keys($result['node']), '');
+
+	return theme('niquesa_blob_function_rooms', $args);
+}
+
+
+function niquesa_blob_group_function_rooms_output(array $args=array()) {
+	global $language;
+
+	$query = db_select('node', 'node');
+
+	$query->join('field_data_field_hotel_city', 'city', 'city.entity_id = node.nid');
+	$query->join('field_data_field_number_of_function_rooms', 'rooms', 'rooms.entity_id = node.nid');
+	$query->join('field_data_field_max_function_room_capacity', 'capacity', 'capacity.entity_id = node.nid');
+	$query->join('taxonomy_term_data', 'term', 'term.tid = city.field_hotel_city_target_id');
+	$query->join('weight_weights', 'weight', 'weight.entity_id = node.nid');
+
+	$result = $query->fields('node', array('nid', 'title'))
+		->fields('term', array('name'))
+		->fields('rooms', array('field_number_of_function_rooms_value'))
+		->fields('capacity', array('field_max_function_room_capacity_value'))
+		->condition('node.status', 1)
+		->condition('node.type', 'hotel')
+		->condition('node.language', $language->language)
+		->orderBy('term.weight', 'ASC')
+		->orderBy('weight.weight', 'ASC')
+		->orderBy('node.title', 'ASC')
+		->execute();
+
+	$args['hotels'] = array();
+	foreach ($result as $row)
+		$args['hotels'][] = (object)array(
+			'nid' => $row->nid,
+			'city' => $row->name,
+			'name' => $row->title,
+			'rooms' => $row->field_number_of_function_rooms_value,
+			'capacity' => $row->field_max_function_room_capacity_value
+		);
+
+	return theme('niquesa_blob_group_function_rooms', $args);
+}
+
+function niquesa_blob_group_function_rooms_christmas_output(array $args=array()) {
+	global $language;
+
+	$query = db_select('node', 'node');
+
+	$query->join('field_data_field_hotel_city', 'city', 'city.entity_id = node.nid');
+	$query->join('field_data_field_number_of_function_rooms', 'rooms', 'rooms.entity_id = node.nid');
+	$query->join('field_data_field_max_function_room_capacity', 'capacity', 'capacity.entity_id = node.nid');
+	$query->join('taxonomy_term_data', 'term', 'term.tid = city.field_hotel_city_target_id');
+	$query->join('weight_weights', 'weight', 'weight.entity_id = node.nid');
+
+	$result = $query->fields('node', array('nid', 'title'))
+		->fields('term', array('name'))
+		->fields('rooms', array('field_number_of_function_rooms_value'))
+		->fields('capacity', array('field_max_function_room_capacity_value'))
+		->condition('node.status', 1)
+		->condition('node.type', 'hotel')
+		->condition('node.language', $language->language)
+		->orderBy('term.weight', 'ASC')
+		->orderBy('weight.weight', 'ASC')
+		->orderBy('node.title', 'ASC')
+		->execute();
+
+	$args['hotels'] = array();
+	foreach ($result as $row)
+		$args['hotels'][] = (object)array(
+			'nid' => $row->nid,
+			'city' => $row->name,
+			'name' => $row->title,
+			'rooms' => $row->field_number_of_function_rooms_value,
+			'capacity' => $row->field_max_function_room_capacity_value
+		);
+
+	return theme('niquesa_blob_group_function_rooms_christmas', $args);
+}
+
+function niquesa_blob_catering_output(array $args=array()) {
+	global $language;
+	
+	$query = new EntityFieldQuery();
+	
+	if ($args['hotel_nid']) {
+		$query->entityCondition('entity_type', 'node')
+			->entityCondition('bundle', 'cuisine')
+			->propertyCondition('status', 1)
+			->propertyCondition('language', $language->language)
+			->fieldCondition('field_hotel', 'target_id', $args['hotel_nid'])
+			->range(0, 4);
+			
+		$result = $query->execute();
+		$args['catering_nodes'] = node_load_multiple(array_keys($result['node']), '');
+
+		return theme('niquesa_blob_catering', $args);
+	} 
+}
+
+
+function niquesa_blob_offers_output($hotel_nid=null) {
+	global $language;
+
+	$query = new EntityFieldQuery();
+
+	$query->entityCondition('entity_type', 'node')
+		->propertyCondition('status', 1)
+		->propertyCondition('type', 'offers')
+		->propertyCondition('language', $language->language);
+
+	if ($hotel_nid)
+		$query->fieldCondition('field_hotel', 'target_id', $hotel_nid);
+
+	$result = $query->execute();
+	$offers = node_load_multiple(array_keys($result['node']), '');
+
+	return theme('niquesa_blob_offers', array(
+		'offers_nodes' => $offers,
+		'hotel_nid' => $hotel_nid,
+	));
+}

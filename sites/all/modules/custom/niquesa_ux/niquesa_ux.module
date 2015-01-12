@@ -1,0 +1,451 @@
+<?php
+/**
+ * Takes the machine name of a taxonomy vocab -
+ * returns an array of term names in the form of
+ * $term_names["arts-and-culture"] => "ARTS &amp; CULTURE"
+ * where the term_name key is used as a class in <li class=
+ */
+function niquesa_ux_taxonomyterms($taxonomy_machine_name) {
+	global $language;
+
+	$query = new EntityFieldQuery();
+	$result = $query->entityCondition('entity_type', 'taxonomy_term')
+		->entityCondition('bundle', $taxonomy_machine_name)
+		->propertyCondition('language', "en")
+		->execute();
+
+	$result= $query->execute();
+	$terms = taxonomy_term_load_multiple(array_keys($result['taxonomy_term']));
+
+	$english_terms=array();
+
+	foreach ($terms as $term)
+		$english_terms[] = $term->name;
+
+	// get the localised terms
+	$query = new EntityFieldQuery();
+	$result = $query->entityCondition('entity_type', 'taxonomy_term')
+		->entityCondition('bundle', $taxonomy_machine_name)
+		->propertyCondition('language', $language->language)
+		->execute();
+
+	$result= $query->execute();
+	$terms = taxonomy_term_load_multiple(array_keys($result['taxonomy_term']));
+	$localised_terms = array();
+	$counter = 0;
+
+	foreach ($terms as $term) {
+		$english_term_name = $english_terms[$counter];
+		$term_class = $english_term_name;
+		$term_class = str_replace('&', 'and', $term_class);
+		$term_class = str_replace(' ', '-', $term_class);
+		$term_class = strtolower($term_class);
+		$term_name_upper = str_replace('&', '&amp;', $term->name);
+		$term_name_upper = strtoupper($term_name_upper);
+		$term_names[$term_class] = $term_name_upper;
+		$counter++;
+	}
+
+	return $term_names;	
+}
+
+/**
+ * Takes a text string , splits it in two. returns a 2 element array
+ */
+function niquesa_ux_two_column_split($colcontent) {
+	$columns = 2;
+	$coloutput = '';
+	$bodytext = array($colcontent);
+	$text = implode(',', $bodytext);
+	$length = strlen($text);
+	$length = ceil($length / $columns);
+	$words = explode(' ', $text);
+	$c = count($words);
+	$l = 0;
+	$colout = array();
+	for ($i = 1; $i <= $columns; $i++) {
+		$new_string = '';
+
+		for($g = $l; $g <= $c; $g++) {
+			if (strlen($new_string) <= $length || $i == $columns)
+				$new_string .= $words[$g] . ' ';
+			else {
+				$l = $g;
+				break;
+			}
+		}
+		$coloutput .= $new_string;
+		$colout[] = $coloutput;
+		$coloutput = '';
+	}
+
+	return $colout;
+}
+
+
+/**
+ * Returns a list of hotel as an associative array where keys are hotel names
+ * and values are paths to hotel nodes
+ */
+function niquesa_ux_hotel_list() {
+	global $language;
+
+	$query = db_select('node', 'node');
+
+	$query->join('field_data_field_hotel_city', 'city', 'city.entity_id = node.nid');
+	$query->join('taxonomy_term_data', 'term', 'term.tid = city.field_hotel_city_target_id');
+	$query->join('weight_weights', 'weight', 'weight.entity_id = node.nid');
+
+	$result = $query->fields('node', array('nid', 'title'))
+		->condition('node.status', 1)
+		->condition('node.type', 'hotel')
+		->condition('node.language', $language->language)
+		->orderBy('term.weight', 'ASC')
+		->orderBy('weight.weight', 'ASC')
+		->orderBy('node.title', 'ASC')
+		->execute();
+
+	$hotels = array();
+	foreach ($result as $row)
+		$hotels[$row->title] = "node/{$row->nid}";
+
+	return $hotels;
+}
+
+/**
+ * Substitute theme_image_style as we want to hack the img markup being rendered
+ * this is used for rendering the img markup on the gallery pages
+ */
+function niquesa_ux_image_style($variables) {
+	$dimensions = array(
+		'width' => $variables['width'],
+		'height' => $variables['height'],
+	);
+
+	image_style_transform_dimensions($variables['style_name'], $dimensions);
+
+	$variables['width'] = $dimensions['width'];
+	$variables['height'] = $dimensions['height'];
+
+	// Determine the URL for the styled image.
+	$variables['path'] = image_style_url($variables['style_name'], $variables['path']);
+
+	return $variables;
+}
+
+/**
+ * Block render function
+ * Faster way to render a block than using module invoke function.
+ */
+function niquesa_ux_block_render($module, $block_id) {
+	$block = block_load($module, $block_id);
+	$block_content = _block_render_blocks(array($block));
+	$build = _block_get_renderable_array($block_content);
+
+	return drupal_render($build);
+}
+
+/**
+ * Implement template_preprocess_page().
+ */
+function niquesa_ux_preprocess_page(&$vars) {
+	global $language;
+
+	if (isset($vars['node'])) {
+		if (!is_array($vars['theme_hook_suggestions']))
+			$vars['theme_hook_suggestions'] = array();
+		$vars['theme_hook_suggestions'][] = "page__{$vars['node']->type}";
+	}
+}
+
+/**
+ * Implement template_preprocess_node().
+ */
+function niquesa_ux_preprocess_node(&$vars) {
+	global $language;
+
+	module_load_include('inc', 'niquesa_ux', 'niquesa_ux.class');
+
+	$ux = new NiquesaUX($language);
+
+	if (isset($vars['node']->field_hotel))
+		$ux->setHotelNid($vars['node']->field_hotel['und'][0]['target_id']);
+
+	if ($ux->getHotelNid()) {
+		switch ($vars['node']->type) {
+			case 'room':
+				$vars['promotions'] = $ux->getPromotions();
+				break;
+			case 'cuisine_landing_page':
+				$vars['restaurants'] = $ux->getRestaurants();
+				$vars['bar'] = $ux->getBar();
+				break;
+			case 'highlights_landing_page':
+				$vars['cuisine'] = $ux->getCuisineHighlights();
+				$vars['destinations'] = $ux->getDestinationHighlights();
+				$vars['highlights'] = $ux->getHighlights();
+				break;
+		}
+	}
+	elseif ($vars['node']->type == 'front_page')
+		$vars['hotel'] = $ux->getHotels();
+
+	if (in_array($vars['node']->type, array('busines_landing_page', 'occasions_landing_page')))
+		$vars['experiences'] = $ux->getExperiences();
+}
+
+/**
+ *  Icon API - Implements hook_icon_providers().
+ */
+function niquesa_ux_icon_providers() {
+	$providers['niquesa'] = array(
+		'title' => t('Niquesa'),
+		'url' => '',
+	);
+	return $providers;
+}
+
+/**
+ * Icon API - Implements hook_icon_bundles().
+ *
+ * usage example:
+ * echo theme('icon', array('bundle' => 'niquesa', 'icon' => 'facebook-icon'));
+ */
+function niquesa_ux_icon_bundles() {
+	$bundles['niquesa_experiences'] = array(
+		'render' => 'image',
+		'path' => drupal_get_path('module', 'niquesa_ux') . '/icons/experiences',
+		'provider' => 'Niquesa',
+		'title' => t('Niquesa Experiences'),
+		'icons' => array(
+			'arts-culture' => 'arts-culture.svg',
+			'business' => 'business.svg',
+			'couple' => 'couple.svg',
+			'family' => 'family.svg',
+			'friends' => 'friends.svg',
+			'gourmet' => 'gourmet.svg',
+			'occasions' => 'occasions.svg',
+			'seasonal' => 'seasonal.svg',
+			'shopping' => 'shopping.svg',
+			'wellness' => 'wellness.svg'
+		),
+	);
+
+
+	$bundles['room_facilities'] = array(
+		'render' => 'image',
+		'path' => drupal_get_path('module', 'niquesa_ux') . '/icons/room_facilities',
+		'provider' => 'Niquesa',
+		'title' => t('Niquesa Room Facilities'),
+		'icons' => array(
+			'bathrooms' => 'bathrooms.png',
+			'bedrooms' => 'bedrooms.png',
+			'dvdplayer' => 'dvdplayer.png',
+			'flatscreentv' => 'flatscreentv.png',
+			'hifi' => 'hifi.png',
+			'internet' => 'internet.png',
+			'kitchenette' => 'kitchenette.png',
+			'minibar' => 'minibar.png',
+			'parlour' => 'parlour.png',
+			'safe' => 'safe.png'
+		),
+	);
+
+	$bundles['function_room_layouts'] = array(
+		'render' => 'image',
+		'path' => drupal_get_path('module', 'niquesa_ux') . '/icons/function_room_layouts',
+		'provider' => 'Niquesa',
+		'title' => t('Function Room Layouts'),
+		'icons' => array(
+			'banquet' => 'banquet.png',
+			'boardroom' => 'boardroom.png',
+			'cabaret' => 'cabaret.png',
+			'classroom' => 'classroom.png',
+			'theatre' => 'theatre.png',
+			'ushape' => 'ushape.png'
+		),
+	);
+
+
+	$bundles['niquesa_destinations'] = array(
+		'render' => 'image',
+		'path' => drupal_get_path('module', 'niquesa_ux') . '/icons/destinations',
+		'provider' => 'Niquesa',
+		'title' => t('Niquesa Destinations'),
+		'icons' => array(
+			'culture' => 'Culture',
+			'event' => 'Event',
+			'food' => 'Food',
+			'nature' => 'Nature',
+			'shopping' => 'Shopping',
+			'spa' => 'Spa',
+			'culture-active' => 'Culture (active)',
+			'event-active' => 'Event (active)',
+			'food-active' => 'Food (active)',
+			'nature-active' => 'Nature (active)',
+			'shopping-active' => 'Shopping (active)',
+			'spa-active' => 'Spa (active)',
+		),
+	);
+
+	return $bundles;
+}
+
+/**
+ * Implement hook_menu().
+ */
+function niquesa_ux_menu() {
+	$items=array();
+	$items['niquesa_ux/taxonomyautocomplete'] = array (
+		'title'=>'',
+		'type' => MENU_CALLBACK,
+		'page callback' => 'niquesa_ux_autocomplete',
+		'access arguments' => array('access content')
+	);
+
+	return $items;
+}
+
+/**
+ * adjust the taxonomy autocomplete widget so that the icon is displayed
+ */
+function niquesa_ux_field_widget_properties_node_alter(&$widget, $context) {
+	if ($widget['type'] == 'taxonomy_autocomplete')
+		$widget['settings']['autocomplete_path'] = 'niquesa_ux/taxonomyautocomplete';
+}
+
+/**
+ * this is copied from taxonomy_autocomplete in taxonomy.pages.inc in core
+ */
+function niquesa_ux_autocomplete($field_name='', $tags_typed='') {
+	// If the request has a '/' in the search text, then the menu system will have
+	// split it into multiple arguments, recover the intended $tags_typed.
+	$args = func_get_args();
+	// Shift off the $field_name argument.
+	array_shift($args);
+	$tags_typed = implode('/', $args);
+
+	// Make sure the field exists and is a taxonomy field.
+	if (!($field = field_info_field($field_name)) || $field['type'] !== 'taxonomy_term_reference') {
+		// Error string. The JavaScript handler will realize this is not JSON and
+		// will display it as debugging information.
+		echo t('Taxonomy field @field_name not found.', array('@field_name' => $field_name));
+		exit;
+	}
+
+	// The user enters a comma-separated list of tags. We only autocomplete the last tag.
+	$tags_typed = drupal_explode_tags($tags_typed);
+	$tag_last = drupal_strtolower(array_pop($tags_typed));
+
+	$term_matches = array();
+	if ($tag_last != '') {
+
+		// Part of the criteria for the query come from the field's own settings.
+		$vids = array();
+		$vocabularies = taxonomy_vocabulary_get_names();
+		foreach ($field['settings']['allowed_values'] as $tree)
+			$vids[] = $vocabularies[$tree['vocabulary']]->vid;
+
+		$query = db_select('taxonomy_term_data', 't');
+		$query->addTag('translatable');
+		$query->addTag('term_access');
+
+		// Do not select already entered terms.
+		if (!empty($tags_typed))
+			$query->condition('t.name', $tags_typed, 'NOT IN');
+
+		// Select rows that match by term name.
+		$tags_return = $query
+			->fields('t', array('tid', 'name'))
+			->condition('t.vid', $vids)
+			->condition('t.name', '%' . db_like($tag_last) . '%', 'LIKE')
+			->range(0, 10)
+			->execute()
+			->fetchAllKeyed();
+
+		$prefix = count($tags_typed) ? drupal_implode_tags($tags_typed) . ', ' : '';
+
+		foreach ($tags_return as $tid => $name) {
+			$n = $name;
+			// Term names containing commas or quotes must be wrapped in quotes.
+			if (strpos($name, ',') !== false || strpos($name, '"') !== false)
+				$n = '"' . str_replace('"', '""', $name) . '"';
+
+
+			$term = taxonomy_term_load($tid);			
+			$term_icon="";
+
+			if(isset($term->field_room_facility_icon))
+				$term_icon_field=$term->field_room_facility_icon;
+
+			if (isset($term->field_layout_icon))
+				$term_icon_field=$term->field_layout_icon;
+
+			if (isset($term->field_destination_icon))
+				$term_icon_field=$term->field_destination_icon;
+
+			if (isset($term->field_experience_icon))
+				$term_icon_field=$term->field_experience_icon;
+
+
+			if (isset($term_icon_field['und'][0]['bundle'])) {
+				if (isset($term_icon_field['und'][0]['bundle'])) {
+					$term_icon = theme('icon', array(
+						'bundle' => $term_icon_field['und'][0]['bundle'],
+						'icon' => $term_icon_field['und'][0]['icon']
+						)
+					);
+				}
+			}	
+
+			$icon_name = check_plain($name);
+			$icon_name = str_replace(' ', '_', $icon_name);
+			$icon_name .= ".png";
+			$term_matches[$prefix . $n] = check_plain($name) . $term_icon;
+
+		}
+	}
+
+	drupal_json_output($term_matches);
+}
+
+/**
+ * get menu link children of current page. Assumes current page's path only exists in one menu
+ */
+function niquesa_ux_get_menu_children(){
+	$children = array();
+	$current = db_query("SELECT menu_name, mlid FROM {menu_links} WHERE link_path = :node", array(':node' => $_GET['q']));
+
+	$current_info = array();
+	foreach ($current as $value)
+		$current_info[] = $value;
+
+	if ($current_info) {
+		$result = db_query("SELECT mlid, plid, link_path, link_title FROM {menu_links} WHERE menu_name=:menu AND plid=:mlid AND hidden=0 ORDER BY weight, link_title", array(':menu' => $current_info[0]->menu_name, ':mlid' => $current_info[0]->mlid));
+		foreach ($result as $row)
+			$children[] = $row;
+	}
+
+	return $children;
+}
+
+/**
+ * get node IDs of child pages (based on menu children)
+ */
+function niquesa_ux_get_menu_children_nids() {
+	$nids = array();
+	$children = niquesa_ux_get_menu_children();
+	foreach ($children as $value)
+		if(substr($value->link_path, 0, 5) == 'node/')
+			$nids[] = substr($value->link_path, 5);
+	return $nids;
+}
+
+/**
+ * Implement hook_form_alter().
+ */
+function niquesa_ux_form_alter(&$form, &$form_state, $form_id) {
+	// Change `N/A` in hotel field in node forms to `Group Level`
+	if (strpos($form_id, '_node_form') > 0 && array_key_exists('field_hotel', $form))
+		$form['field_hotel']['und']['#options']['_none'] = '<em>Group Level</em>';
+}

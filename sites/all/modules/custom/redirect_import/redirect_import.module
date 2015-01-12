@@ -1,0 +1,92 @@
+<?php
+function redirect_import_menu() {
+	return array(
+		'admin/config/search/redirect/import' => array(
+			'title' => 'Import',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('redirect_import_import_form'),
+			'access arguments' => array('administer redirects'),
+			'type' => MENU_LOCAL_ACTION,
+		),
+	);
+}
+
+
+function redirect_import_import_form() {
+	return array(
+		'file' => array(
+			'#title' => t('CSV file'),
+			'#type' => 'file',
+		),
+		'language' => array(
+			'#type' => 'select',
+			'#title' => t('Language'),
+			'#options' => array(LANGUAGE_NONE => t('All languages')) + locale_language_list('name'),
+			'#description' => t('A redirect set for a specific language will always be used when requesting this page in that language, and takes precedence over redirects set for <em>All languages</em>.'),
+		),
+		'advanced' => array(
+			'#type' => 'fieldset',
+			'#title' => t('Advanced options'),
+			'#collapsible' => true,
+			'#collapsed' => true,
+			'status_code' => array(
+				'#type' => 'select',
+				'#title' => t('Redirect status'),
+				'#description' => t('You can find more information about HTTP redirect status codes at <a href="@status-codes">@status-codes</a>.', array('@status-codes' => 'http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection')),
+				'#options' => array(
+					0 => t('Default (@default)', array(
+						'@default' => variable_get('redirect_default_status_code', 301)
+					))
+				) + redirect_status_code_options(),
+			),
+		),
+		'actions' => array(
+			'#type' => 'actions',
+			'submit' => array(
+				'#type' => 'submit',
+				'#value' => t('Import'),
+			),
+		),
+	);
+}
+
+
+function redirect_import_import_form_submit($form, &$form_state) {
+	$handle = fopen($_FILES['files']['tmp_name']['file'], 'rb');
+	$language = $form_state['values']['language'];
+	$status_code = $form_state['values']['status_code'];
+
+	$errors = array();
+
+	$i = 0;
+	while (list($source, $redirect) = fgetcsv($handle)) {
+		$i++;
+		$redirect_entity = (object) array(
+			'type' => 'redirect',
+			'source' => $source,
+			'source_options' => array(),
+			'redirect' => $redirect,
+			'redirect_options' => array(),
+			'language' => $language,
+			'status_code' => $status_code
+		);
+		try {
+			redirect_save($redirect_entity);
+		}
+		catch (PDOException $e) {
+			$errors[] = "{$source} &rArr; {$redirect} (line: {$i})";
+		}
+	}
+
+	if ($errors)
+		drupal_set_message(t("Could not import the following rows:<br>!rows<br>Check if they are correct and not already in the database and try again.", array('!rows' => implode('<br>', $errors))), 'error');
+
+	if ($i > count($errors))
+		drupal_set_message(format_plural(
+			$i - count($errors),
+			'Successfully imported 1 redirect',
+			'Successfully imported @count redirects'
+		));
+
+	$form_state['redirect'] = 'admin/config/search/redirect';
+}

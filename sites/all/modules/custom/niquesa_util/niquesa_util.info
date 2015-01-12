@@ -1,0 +1,4 @@
+name = Niquesa Util module
+description = A testing sandbox module for developers
+package = Niquesa
+core = 7.x

@@ -1,0 +1,4 @@
+name = Niquesa More Menu
+description = Provides configuration for the "more" menu in footer.
+package = Niquesa
+core = 7.x

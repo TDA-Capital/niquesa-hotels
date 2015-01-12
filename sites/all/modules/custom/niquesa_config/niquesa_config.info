@@ -1,0 +1,5 @@
+name = Niquesa Config
+description = Adds some configuration options to admin interface
+package = Niquesa
+core = 7.x
+version = 7.x-1.0

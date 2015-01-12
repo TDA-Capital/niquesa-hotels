@@ -1,0 +1,52 @@
+<?php
+/*
+ * to check the current schema number 
+ * select name, schema_version from system where type="module" and name="niquesa_deployupdate";
+ *
+ * go to <domain>/update.php as admin to apply the latest updates
+ *
+ *
+ * to apply a new update add a hook update with a +1 schema version
+ * e.g. if the current schema is 2003 then add
+ * niquesa_deployupdate_update_2004
+ */
+
+
+/**
+* Revert specified features.
+*
+* @TODO Check that it really is Forced features revert.  Currently an exact
+* copy of the function initially placed in feature_projects.install.
+*
+* Code mostly taken from drush.
+* see:
+* http://definitivedrupal.org/erratum/reverting-features-update-hooks-requires-helper-function
+*/
+
+function sdl_features_revert($modules) {
+  module_load_include('inc', 'features', 'features.export');
+  features_include();
+  foreach (
+    $modules as $module) {
+      if (($feature = feature_load($module, TRUE)) && module_exists($module)) {
+        $components = array();
+      // Forcefully revert all components of a feature.
+      foreach (array_keys($feature->info['features']) as $component) {
+        if (features_hook($component, 'features_revert')) {
+          $components[] = $component;
+        }
+      }
+    }
+    foreach ($components as $component) {
+      features_revert(array($module => array($component)));
+    }
+  }
+}
+ 
+
+/**
+ * doesnt do anything yet
+ *
+ */
+function niquesa_deployupdate_update_1010() {
+}

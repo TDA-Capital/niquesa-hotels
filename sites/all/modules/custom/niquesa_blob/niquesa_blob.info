@@ -1,0 +1,4 @@
+name = Niquesa Blob
+description = Defines blobs of HTML that are common across several content types
+package = Niquesa
+core = 7.x

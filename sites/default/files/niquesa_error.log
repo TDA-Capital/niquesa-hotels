@@ -1,0 +1,3426 @@
+[22-May-2014 11:12:18 UTC] Array
+(
+    [50000 Grand Hotel Continental 813] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-niquesahotels
+                    [mlid] => 813
+                    [plid] => 0
+                    [link_path] => node/15
+                    [router_path] => node/%
+                    [link_title] => Grand Hotel Continental
+                    [options] => Array
+                        (
+                            [node_type] => hotel
+                            [alter] => 1
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 1
+                    [expanded] => 0
+                    [weight] => 0
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 813
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => Grand Hotel Continental
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/15
+                    [localized_options] => Array
+                        (
+                            [node_type] => hotel
+                            [alter] => 1
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [50000 Hotel Beverly Hills 811] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-niquesahotels
+                    [mlid] => 811
+                    [plid] => 0
+                    [link_path] => node/120
+                    [router_path] => node/%
+                    [link_title] => Hotel Beverly Hills
+                    [options] => Array
+                        (
+                            [node_type] => hotel
+                            [alter] => 1
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 1
+                    [expanded] => 0
+                    [weight] => 0
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 811
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => Hotel Beverly Hills
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/120
+                    [localized_options] => Array
+                        (
+                            [node_type] => hotel
+                            [alter] => 1
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [50000 Hotel Helvetia & Bristol 806] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-niquesahotels
+                    [mlid] => 806
+                    [plid] => 0
+                    [link_path] => node/80
+                    [router_path] => node/%
+                    [link_title] => Hotel Helvetia & Bristol
+                    [options] => Array
+                        (
+                            [node_type] => hotel
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/80
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 1
+                    [expanded] => 0
+                    [weight] => 0
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 806
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => Hotel Helvetia & Bristol
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/80
+                    [localized_options] => Array
+                        (
+                            [node_type] => hotel
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/80
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [50000 Hotel Villa Michelangelo 808] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-niquesahotels
+                    [mlid] => 808
+                    [plid] => 0
+                    [link_path] => node/17
+                    [router_path] => node/%
+                    [link_title] => Hotel Villa Michelangelo
+                    [options] => Array
+                        (
+                            [node_type] => hotel
+                            [alter] => 1
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 1
+                    [expanded] => 0
+                    [weight] => 0
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 808
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => Hotel Villa Michelangelo
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/17
+                    [localized_options] => Array
+                        (
+                            [node_type] => hotel
+                            [alter] => 1
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [50000 Hotel d'Inghilterra 1105] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-niquesahotels
+                    [mlid] => 1105
+                    [plid] => 0
+                    [link_path] => node/28
+                    [router_path] => node/%
+                    [link_title] => Hotel d'Inghilterra
+                    [options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                )
+
+                            [alter] => 1
+                            [node_type] => hotel
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/28
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 1
+                    [expanded] => 0
+                    [weight] => 0
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1105
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => it
+                    [i18n_tsid] => 36
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => Hotel d'Inghilterra
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 1
+                    [access] => 1
+                    [href] => node/28
+                    [localized_options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                )
+
+                            [alter] => 1
+                            [node_type] => hotel
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/28
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [below] => Array
+                (
+                    [49950 Colpi di Sole 1127] => Array
+                        (
+                            [link] => Array
+                                (
+                                    [menu_name] => menu-niquesahotels
+                                    [mlid] => 1127
+                                    [plid] => 1105
+                                    [link_path] => node/295
+                                    [router_path] => node/%
+                                    [link_title] => Colpi di Sole
+                                    [options] => Array
+                                        (
+                                            [node_type] => highlights_landing_page
+                                            [alter] => 1
+                                            [attributes] => Array
+                                                (
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                    [module] => menu
+                                    [hidden] => 0
+                                    [external] => 0
+                                    [has_children] => 0
+                                    [expanded] => 0
+                                    [weight] => -50
+                                    [depth] => 2
+                                    [customized] => 1
+                                    [p1] => 1105
+                                    [p2] => 1127
+                                    [p3] => 0
+                                    [p4] => 0
+                                    [p5] => 0
+                                    [p6] => 0
+                                    [p7] => 0
+                                    [p8] => 0
+                                    [p9] => 0
+                                    [updated] => 0
+                                    [language] => it
+                                    [i18n_tsid] => 0
+                                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                                    [to_arg_functions] => 
+                                    [access_callback] => node_access
+                                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                                    [page_callback] => node_page_view
+                                    [page_arguments] => a:1:{i:0;i:1;}
+                                    [delivery_callback] => 
+                                    [tab_parent] => 
+                                    [tab_root] => node/%
+                                    [title] => Colpi di Sole
+                                    [title_callback] => node_page_title
+                                    [title_arguments] => a:1:{i:0;i:1;}
+                                    [theme_callback] => 
+                                    [theme_arguments] => a:0:{}
+                                    [type] => 6
+                                    [description] => 
+                                    [in_active_trail] => 
+                                    [access] => 1
+                                    [href] => node/295
+                                    [localized_options] => Array
+                                        (
+                                            [node_type] => highlights_landing_page
+                                            [alter] => 1
+                                            [attributes] => Array
+                                                (
+                                                    [title] => 
+                                                )
+
+                                        )
+
+                                    [i18n_menu] => 1
+                                )
+
+                            [below] => Array
+                                (
+                                )
+
+                        )
+
+                    [49951 Esperienze 1088] => Array
+                        (
+                            [link] => Array
+                                (
+                                    [menu_name] => menu-niquesahotels
+                                    [mlid] => 1088
+                                    [plid] => 1105
+                                    [link_path] => node/252
+                                    [router_path] => node/%
+                                    [link_title] => Esperienze
+                                    [options] => Array
+                                        (
+                                            [node_type] => experiences_landing_page
+                                            [alter] => 1
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => node/252
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [module] => menu
+                                    [hidden] => 0
+                                    [external] => 0
+                                    [has_children] => 1
+                                    [expanded] => 0
+                                    [weight] => -49
+                                    [depth] => 2
+                                    [customized] => 1
+                                    [p1] => 1105
+                                    [p2] => 1088
+                                    [p3] => 0
+                                    [p4] => 0
+                                    [p5] => 0
+                                    [p6] => 0
+                                    [p7] => 0
+                                    [p8] => 0
+                                    [p9] => 0
+                                    [updated] => 0
+                                    [language] => it
+                                    [i18n_tsid] => 0
+                                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                                    [to_arg_functions] => 
+                                    [access_callback] => node_access
+                                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                                    [page_callback] => node_page_view
+                                    [page_arguments] => a:1:{i:0;i:1;}
+                                    [delivery_callback] => 
+                                    [tab_parent] => 
+                                    [tab_root] => node/%
+                                    [title] => Esperienze
+                                    [title_callback] => node_page_title
+                                    [title_arguments] => a:1:{i:0;i:1;}
+                                    [theme_callback] => 
+                                    [theme_arguments] => a:0:{}
+                                    [type] => 6
+                                    [description] => 
+                                    [in_active_trail] => 
+                                    [access] => 1
+                                    [href] => node/252
+                                    [localized_options] => Array
+                                        (
+                                            [node_type] => experiences_landing_page
+                                            [alter] => 1
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => node/252
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [i18n_menu] => 1
+                                )
+
+                            [below] => Array
+                                (
+                                )
+
+                        )
+
+                    [49952 Destinazione 1106] => Array
+                        (
+                            [link] => Array
+                                (
+                                    [menu_name] => menu-niquesahotels
+                                    [mlid] => 1106
+                                    [plid] => 1105
+                                    [link_path] => node/268
+                                    [router_path] => node/%
+                                    [link_title] => Destinazione
+                                    [options] => Array
+                                        (
+                                            [node_type] => destination_landing_page
+                                            [alter] => 1
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => node/268
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [module] => menu
+                                    [hidden] => 0
+                                    [external] => 0
+                                    [has_children] => 1
+                                    [expanded] => 0
+                                    [weight] => -48
+                                    [depth] => 2
+                                    [customized] => 1
+                                    [p1] => 1105
+                                    [p2] => 1106
+                                    [p3] => 0
+                                    [p4] => 0
+                                    [p5] => 0
+                                    [p6] => 0
+                                    [p7] => 0
+                                    [p8] => 0
+                                    [p9] => 0
+                                    [updated] => 0
+                                    [language] => it
+                                    [i18n_tsid] => 0
+                                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                                    [to_arg_functions] => 
+                                    [access_callback] => node_access
+                                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                                    [page_callback] => node_page_view
+                                    [page_arguments] => a:1:{i:0;i:1;}
+                                    [delivery_callback] => 
+                                    [tab_parent] => 
+                                    [tab_root] => node/%
+                                    [title] => Destinazione
+                                    [title_callback] => node_page_title
+                                    [title_arguments] => a:1:{i:0;i:1;}
+                                    [theme_callback] => 
+                                    [theme_arguments] => a:0:{}
+                                    [type] => 6
+                                    [description] => 
+                                    [in_active_trail] => 
+                                    [access] => 1
+                                    [href] => node/268
+                                    [localized_options] => Array
+                                        (
+                                            [node_type] => destination_landing_page
+                                            [alter] => 1
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => node/268
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [i18n_menu] => 1
+                                )
+
+                            [below] => Array
+                                (
+                                )
+
+                        )
+
+                    [49953 Suite e Camere 1128] => Array
+                        (
+                            [link] => Array
+                                (
+                                    [menu_name] => menu-niquesahotels
+                                    [mlid] => 1128
+                                    [plid] => 1105
+                                    [link_path] => node/296
+                                    [router_path] => node/%
+                                    [link_title] => Suite e Camere
+                                    [options] => Array
+                                        (
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => 
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                            [node_type] => suites_and_rooms_landing_page
+                                            [alter] => 1
+                                        )
+
+                                    [module] => menu
+                                    [hidden] => 0
+                                    [external] => 0
+                                    [has_children] => 0
+                                    [expanded] => 0
+                                    [weight] => -47
+                                    [depth] => 2
+                                    [customized] => 1
+                                    [p1] => 1105
+                                    [p2] => 1128
+                                    [p3] => 0
+                                    [p4] => 0
+                                    [p5] => 0
+                                    [p6] => 0
+                                    [p7] => 0
+                                    [p8] => 0
+                                    [p9] => 0
+                                    [updated] => 0
+                                    [language] => it
+                                    [i18n_tsid] => 0
+                                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                                    [to_arg_functions] => 
+                                    [access_callback] => node_access
+                                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                                    [page_callback] => node_page_view
+                                    [page_arguments] => a:1:{i:0;i:1;}
+                                    [delivery_callback] => 
+                                    [tab_parent] => 
+                                    [tab_root] => node/%
+                                    [title] => Suite e Camere
+                                    [title_callback] => node_page_title
+                                    [title_arguments] => a:1:{i:0;i:1;}
+                                    [theme_callback] => 
+                                    [theme_arguments] => a:0:{}
+                                    [type] => 6
+                                    [description] => 
+                                    [in_active_trail] => 
+                                    [access] => 1
+                                    [href] => node/296
+                                    [localized_options] => Array
+                                        (
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => 
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                            [node_type] => suites_and_rooms_landing_page
+                                            [alter] => 1
+                                        )
+
+                                    [i18n_menu] => 1
+                                )
+
+                            [below] => Array
+                                (
+                                )
+
+                        )
+
+                    [49954 Occasioni 1130] => Array
+                        (
+                            [link] => Array
+                                (
+                                    [menu_name] => menu-niquesahotels
+                                    [mlid] => 1130
+                                    [plid] => 1105
+                                    [link_path] => node/298
+                                    [router_path] => node/%
+                                    [link_title] => Occasioni
+                                    [options] => Array
+                                        (
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => 
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                            [node_type] => occasions_landing_page
+                                            [alter] => 1
+                                        )
+
+                                    [module] => menu
+                                    [hidden] => 0
+                                    [external] => 0
+                                    [has_children] => 0
+                                    [expanded] => 0
+                                    [weight] => -46
+                                    [depth] => 2
+                                    [customized] => 1
+                                    [p1] => 1105
+                                    [p2] => 1130
+                                    [p3] => 0
+                                    [p4] => 0
+                                    [p5] => 0
+                                    [p6] => 0
+                                    [p7] => 0
+                                    [p8] => 0
+                                    [p9] => 0
+                                    [updated] => 0
+                                    [language] => it
+                                    [i18n_tsid] => 0
+                                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                                    [to_arg_functions] => 
+                                    [access_callback] => node_access
+                                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                                    [page_callback] => node_page_view
+                                    [page_arguments] => a:1:{i:0;i:1;}
+                                    [delivery_callback] => 
+                                    [tab_parent] => 
+                                    [tab_root] => node/%
+                                    [title] => Occasioni
+                                    [title_callback] => node_page_title
+                                    [title_arguments] => a:1:{i:0;i:1;}
+                                    [theme_callback] => 
+                                    [theme_arguments] => a:0:{}
+                                    [type] => 6
+                                    [description] => 
+                                    [in_active_trail] => 
+                                    [access] => 1
+                                    [href] => node/298
+                                    [localized_options] => Array
+                                        (
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => 
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                            [node_type] => occasions_landing_page
+                                            [alter] => 1
+                                        )
+
+                                    [i18n_menu] => 1
+                                )
+
+                            [below] => Array
+                                (
+                                )
+
+                        )
+
+                    [49955 Azienda 1129] => Array
+                        (
+                            [link] => Array
+                                (
+                                    [menu_name] => menu-niquesahotels
+                                    [mlid] => 1129
+                                    [plid] => 1105
+                                    [link_path] => node/297
+                                    [router_path] => node/%
+                                    [link_title] => Azienda
+                                    [options] => Array
+                                        (
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => 
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                            [node_type] => business_landing_page
+                                            [alter] => 1
+                                        )
+
+                                    [module] => menu
+                                    [hidden] => 0
+                                    [external] => 0
+                                    [has_children] => 0
+                                    [expanded] => 0
+                                    [weight] => -45
+                                    [depth] => 2
+                                    [customized] => 1
+                                    [p1] => 1105
+                                    [p2] => 1129
+                                    [p3] => 0
+                                    [p4] => 0
+                                    [p5] => 0
+                                    [p6] => 0
+                                    [p7] => 0
+                                    [p8] => 0
+                                    [p9] => 0
+                                    [updated] => 0
+                                    [language] => it
+                                    [i18n_tsid] => 0
+                                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                                    [to_arg_functions] => 
+                                    [access_callback] => node_access
+                                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                                    [page_callback] => node_page_view
+                                    [page_arguments] => a:1:{i:0;i:1;}
+                                    [delivery_callback] => 
+                                    [tab_parent] => 
+                                    [tab_root] => node/%
+                                    [title] => Azienda
+                                    [title_callback] => node_page_title
+                                    [title_arguments] => a:1:{i:0;i:1;}
+                                    [theme_callback] => 
+                                    [theme_arguments] => a:0:{}
+                                    [type] => 6
+                                    [description] => 
+                                    [in_active_trail] => 
+                                    [access] => 1
+                                    [href] => node/297
+                                    [localized_options] => Array
+                                        (
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => 
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                            [node_type] => business_landing_page
+                                            [alter] => 1
+                                        )
+
+                                    [i18n_menu] => 1
+                                )
+
+                            [below] => Array
+                                (
+                                )
+
+                        )
+
+                    [49956 Cucina 1114] => Array
+                        (
+                            [link] => Array
+                                (
+                                    [menu_name] => menu-niquesahotels
+                                    [mlid] => 1114
+                                    [plid] => 1105
+                                    [link_path] => node/276
+                                    [router_path] => node/%
+                                    [link_title] => Cucina
+                                    [options] => Array
+                                        (
+                                            [node_type] => cuisine_landing_page
+                                            [alter] => 1
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => node/276
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [module] => menu
+                                    [hidden] => 0
+                                    [external] => 0
+                                    [has_children] => 1
+                                    [expanded] => 0
+                                    [weight] => -44
+                                    [depth] => 2
+                                    [customized] => 1
+                                    [p1] => 1105
+                                    [p2] => 1114
+                                    [p3] => 0
+                                    [p4] => 0
+                                    [p5] => 0
+                                    [p6] => 0
+                                    [p7] => 0
+                                    [p8] => 0
+                                    [p9] => 0
+                                    [updated] => 0
+                                    [language] => it
+                                    [i18n_tsid] => 0
+                                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                                    [to_arg_functions] => 
+                                    [access_callback] => node_access
+                                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                                    [page_callback] => node_page_view
+                                    [page_arguments] => a:1:{i:0;i:1;}
+                                    [delivery_callback] => 
+                                    [tab_parent] => 
+                                    [tab_root] => node/%
+                                    [title] => Cucina
+                                    [title_callback] => node_page_title
+                                    [title_arguments] => a:1:{i:0;i:1;}
+                                    [theme_callback] => 
+                                    [theme_arguments] => a:0:{}
+                                    [type] => 6
+                                    [description] => 
+                                    [in_active_trail] => 
+                                    [access] => 1
+                                    [href] => node/276
+                                    [localized_options] => Array
+                                        (
+                                            [node_type] => cuisine_landing_page
+                                            [alter] => 1
+                                            [menu_views] => Array
+                                                (
+                                                    [mlid] => 0
+                                                    [type] => link
+                                                    [original_path] => node/276
+                                                    [view] => Array
+                                                        (
+                                                            [name] => 
+                                                        )
+
+                                                )
+
+                                        )
+
+                                    [i18n_menu] => 1
+                                )
+
+                            [below] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [50000 Hotel d'Inghilterra 809] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-niquesahotels
+                    [mlid] => 809
+                    [plid] => 0
+                    [link_path] => node/23
+                    [router_path] => node/%
+                    [link_title] => Hotel d'Inghilterra
+                    [options] => Array
+                        (
+                            [node_type] => hotel
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/23
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 1
+                    [expanded] => 0
+                    [weight] => 0
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 809
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 36
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => Hotel d'Inghilterra
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/23
+                    [localized_options] => Array
+                        (
+                            [node_type] => hotel
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/23
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [50000 Residenza Di Ripetta 807] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-niquesahotels
+                    [mlid] => 807
+                    [plid] => 0
+                    [link_path] => node/56
+                    [router_path] => node/%
+                    [link_title] => Residenza Di Ripetta
+                    [options] => Array
+                        (
+                            [node_type] => hotel
+                            [attributes] => Array
+                                (
+                                    [title] => This is a hotel in Rome
+                                )
+
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/56
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 1
+                    [expanded] => 0
+                    [weight] => 0
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 807
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => Residenza Di Ripetta
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/56
+                    [localized_options] => Array
+                        (
+                            [node_type] => hotel
+                            [attributes] => Array
+                                (
+                                    [title] => This is a hotel in Rome
+                                )
+
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/56
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+)
+
+[22-May-2014 11:12:18 UTC] Array
+(
+    [49950 HOTELS 1044] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1044
+                    [plid] => 0
+                    [link_path] => <front>
+                    [router_path] => 
+                    [link_title] => HOTELS
+                    [options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                            [alter] => 1
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 1
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -50
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1044
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 38
+                    [load_functions] => 
+                    [to_arg_functions] => 
+                    [access_callback] => 
+                    [access_arguments] => 
+                    [page_callback] => 
+                    [page_arguments] => 
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => 
+                    [title] => HOTELS
+                    [title_callback] => 
+                    [title_arguments] => 
+                    [theme_callback] => 
+                    [theme_arguments] => 
+                    [type] => 
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => <front>
+                    [localized_options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                            [alter] => 1
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49951 ABOUT US 1058] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1058
+                    [plid] => 0
+                    [link_path] => node/293
+                    [router_path] => node/%
+                    [link_title] => ABOUT US
+                    [options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                )
+
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/293
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                            [node_type] => article
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -49
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1058
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 40
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => ABOUT US
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/293
+                    [localized_options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                )
+
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/293
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                            [node_type] => article
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49952 EXPERIENCES 1048] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1048
+                    [plid] => 0
+                    [link_path] => node/247
+                    [router_path] => node/%
+                    [link_title] => EXPERIENCES
+                    [options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                )
+
+                            [alter] => 1
+                            [node_type] => experiences_landing_page
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/247
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -48
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1048
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 33
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => EXPERIENCES
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/247
+                    [localized_options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                )
+
+                            [alter] => 1
+                            [node_type] => experiences_landing_page
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/247
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49953 PROMOTIONS 1066] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1066
+                    [plid] => 0
+                    [link_path] => node/234
+                    [router_path] => node/%
+                    [link_title] => PROMOTIONS
+                    [options] => Array
+                        (
+                            [node_type] => promotions_landing_page
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/234
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 1
+                    [expanded] => 0
+                    [weight] => -47
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1066
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => PROMOTIONS
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/234
+                    [localized_options] => Array
+                        (
+                            [node_type] => promotions_landing_page
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/234
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49954 DESTINATIONS 1125] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1125
+                    [plid] => 0
+                    [link_path] => node/291
+                    [router_path] => node/%
+                    [link_title] => DESTINATIONS
+                    [options] => Array
+                        (
+                            [node_type] => destination_landing_page
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/291
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -46
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1125
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => DESTINATIONS
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/291
+                    [localized_options] => Array
+                        (
+                            [node_type] => destination_landing_page
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/291
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49955 BUSINESS 1046] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1046
+                    [plid] => 0
+                    [link_path] => node/263
+                    [router_path] => node/%
+                    [link_title] => BUSINESS
+                    [options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                )
+
+                            [alter] => 1
+                            [node_type] => business_landing_page
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/263
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -45
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1046
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => BUSINESS
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/263
+                    [localized_options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                )
+
+                            [alter] => 1
+                            [node_type] => business_landing_page
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/263
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49956 OCCASIONS 1100] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1100
+                    [plid] => 0
+                    [link_path] => node/264
+                    [router_path] => node/%
+                    [link_title] => OCCASIONS
+                    [options] => Array
+                        (
+                            [node_type] => occasions_landing_page
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/264
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 1
+                    [external] => 0
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -44
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1100
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => en
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => OCCASIONS
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/264
+                    [localized_options] => Array
+                        (
+                            [node_type] => occasions_landing_page
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/264
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49957 HOTEL 1120] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1120
+                    [plid] => 0
+                    [link_path] => <front>
+                    [router_path] => 
+                    [link_title] => HOTEL
+                    [options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                            [alter] => 1
+                        )
+
+                    [module] => menu
+                    [hidden] => 0
+                    [external] => 1
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -43
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1120
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => it
+                    [i18n_tsid] => 38
+                    [load_functions] => 
+                    [to_arg_functions] => 
+                    [access_callback] => 
+                    [access_arguments] => 
+                    [page_callback] => 
+                    [page_arguments] => 
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => 
+                    [title] => HOTEL
+                    [title_callback] => 
+                    [title_arguments] => 
+                    [theme_callback] => 
+                    [theme_arguments] => 
+                    [type] => 
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => <front>
+                    [localized_options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                            [alter] => 1
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49958 CHI SIAMO 1121] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1121
+                    [plid] => 0
+                    [link_path] => node/294
+                    [router_path] => node/%
+                    [link_title] => CHI SIAMO
+                    [options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                            [alter] => 1
+                            [node_type] => article
+                        )
+
+                    [module] => menu
+                    [hidden] => 0
+                    [external] => 0
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -42
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1121
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => it
+                    [i18n_tsid] => 40
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => CHI SIAMO
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/294
+                    [localized_options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                            [alter] => 1
+                            [node_type] => article
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49959 ESPERIENZE 1099] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1099
+                    [plid] => 0
+                    [link_path] => node/248
+                    [router_path] => node/%
+                    [link_title] => ESPERIENZE
+                    [options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                            [alter] => 1
+                        )
+
+                    [module] => menu
+                    [hidden] => 0
+                    [external] => 0
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -41
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1099
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => it
+                    [i18n_tsid] => 33
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => ESPERIENZE
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/248
+                    [localized_options] => Array
+                        (
+                            [attributes] => Array
+                                (
+                                    [title] => 
+                                )
+
+                            [alter] => 1
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49960 PROMOZIONI 1122] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1122
+                    [plid] => 0
+                    [link_path] => node/288
+                    [router_path] => node/%
+                    [link_title] => PROMOZIONI
+                    [options] => Array
+                        (
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => 
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                            [node_type] => promotions_landing_page
+                            [alter] => 1
+                        )
+
+                    [module] => menu
+                    [hidden] => 0
+                    [external] => 0
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -40
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1122
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => it
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => PROMOZIONI
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/288
+                    [localized_options] => Array
+                        (
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => 
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                            [node_type] => promotions_landing_page
+                            [alter] => 1
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49961 DESTINAZIONI 1126] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1126
+                    [plid] => 0
+                    [link_path] => node/292
+                    [router_path] => node/%
+                    [link_title] => DESTINAZIONI
+                    [options] => Array
+                        (
+                            [node_type] => destination_landing_page
+                            [alter] => 1
+                            [attributes] => Array
+                                (
+                                )
+
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/292
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 0
+                    [external] => 0
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -39
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1126
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => it
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => DESTINAZIONI
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/292
+                    [localized_options] => Array
+                        (
+                            [node_type] => destination_landing_page
+                            [alter] => 1
+                            [attributes] => Array
+                                (
+                                )
+
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/292
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49962 AZIENDA 1123] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1123
+                    [plid] => 0
+                    [link_path] => node/289
+                    [router_path] => node/%
+                    [link_title] => AZIENDA
+                    [options] => Array
+                        (
+                            [node_type] => business_landing_page
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/289
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [module] => menu
+                    [hidden] => 0
+                    [external] => 0
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -38
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1123
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => it
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => AZIENDA
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/289
+                    [localized_options] => Array
+                        (
+                            [node_type] => business_landing_page
+                            [alter] => 1
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => node/289
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+    [49963 RICORRENZE 1124] => Array
+        (
+            [link] => Array
+                (
+                    [menu_name] => menu-group-menu
+                    [mlid] => 1124
+                    [plid] => 0
+                    [link_path] => node/290
+                    [router_path] => node/%
+                    [link_title] => RICORRENZE
+                    [options] => Array
+                        (
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => 
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                            [node_type] => occasions_landing_page
+                            [alter] => 1
+                        )
+
+                    [module] => menu
+                    [hidden] => 0
+                    [external] => 0
+                    [has_children] => 0
+                    [expanded] => 0
+                    [weight] => -37
+                    [depth] => 1
+                    [customized] => 1
+                    [p1] => 1124
+                    [p2] => 0
+                    [p3] => 0
+                    [p4] => 0
+                    [p5] => 0
+                    [p6] => 0
+                    [p7] => 0
+                    [p8] => 0
+                    [p9] => 0
+                    [updated] => 0
+                    [language] => it
+                    [i18n_tsid] => 0
+                    [load_functions] => a:1:{i:1;s:9:"node_load";}
+                    [to_arg_functions] => 
+                    [access_callback] => node_access
+                    [access_arguments] => a:2:{i:0;s:4:"view";i:1;i:1;}
+                    [page_callback] => node_page_view
+                    [page_arguments] => a:1:{i:0;i:1;}
+                    [delivery_callback] => 
+                    [tab_parent] => 
+                    [tab_root] => node/%
+                    [title] => RICORRENZE
+                    [title_callback] => node_page_title
+                    [title_arguments] => a:1:{i:0;i:1;}
+                    [theme_callback] => 
+                    [theme_arguments] => a:0:{}
+                    [type] => 6
+                    [description] => 
+                    [in_active_trail] => 
+                    [access] => 1
+                    [href] => node/290
+                    [localized_options] => Array
+                        (
+                            [menu_views] => Array
+                                (
+                                    [mlid] => 0
+                                    [type] => link
+                                    [original_path] => 
+                                    [view] => Array
+                                        (
+                                            [name] => 
+                                        )
+
+                                )
+
+                            [node_type] => occasions_landing_page
+                            [alter] => 1
+                        )
+
+                    [i18n_menu] => 1
+                )
+
+            [below] => Array
+                (
+                )
+
+        )
+
+)
+
+[17-Jun-2014 10:43:16 UTC] stdClass Object
+(
+    [vid] => 204
+    [uid] => 1
+    [title] => Our menus
+    [log] => 
+    [status] => 1
+    [comment] => 1
+    [promote] => 0
+    [sticky] => 0
+    [nid] => 204
+    [type] => cuisine
+    [language] => en
+    [created] => 1396454230
+    [changed] => 1401370177
+    [tnid] => 204
+    [translate] => 0
+    [revision_timestamp] => 1401370177
+    [revision_uid] => 1
+    [field_hotel] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [target_id] => 23
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_content] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [value] => Pid est elit, facilisis, vel nec. Scelerisque elementum enim ut egestas placerat, scelerisque aenean duis in, porta mid? Aliquam a scelerisque a. Magna porta porttitor nec ac cum penatibus, et urna, scelerisque? Aliquam, mattis non adipiscing amet elit, risus integer? Etiam augue montes! Sit sagittis rhoncus, egestas, a mattis, ut.
+
+Dis enim dictumst dignissim sociis, nisi lacus, urna, porttitor porttitor arcu ac rhoncus. Sed cum pellentesque rhoncus eu porttitor. Rhoncus turpis magna tincidunt augue, non! In, magna augue ac rhoncus aliquet enim ut turpis tristique urna aenean, adipiscing dignissim? Ac, adipiscing elementum ac placerat nec, ridiculus ridiculus magnis. Lundium.
+                            [format] => filtered_html
+                            [safe_value] => <p>Pid est elit, facilisis, vel nec. Scelerisque elementum enim ut egestas placerat, scelerisque aenean duis in, porta mid? Aliquam a scelerisque a. Magna porta porttitor nec ac cum penatibus, et urna, scelerisque? Aliquam, mattis non adipiscing amet elit, risus integer? Etiam augue montes! Sit sagittis rhoncus, egestas, a mattis, ut.</p>
+<p>Dis enim dictumst dignissim sociis, nisi lacus, urna, porttitor porttitor arcu ac rhoncus. Sed cum pellentesque rhoncus eu porttitor. Rhoncus turpis magna tincidunt augue, non! In, magna augue ac rhoncus aliquet enim ut turpis tristique urna aenean, adipiscing dignissim? Ac, adipiscing elementum ac placerat nec, ridiculus ridiculus magnis. Lundium.</p>
+
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_image] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [fid] => 187
+                            [uid] => 1
+                            [filename] => ristorante-romano_1.jpg
+                            [uri] => public://ristorante-romano_1.jpg
+                            [filemime] => image/jpeg
+                            [filesize] => 102961
+                            [status] => 1
+                            [timestamp] => 1396454230
+                            [type] => image
+                            [field_file_image_alt_text] => Array
+                                (
+                                )
+
+                            [field_file_image_title_text] => Array
+                                (
+                                )
+
+                            [rdf_mapping] => Array
+                                (
+                                )
+
+                            [metadata] => Array
+                                (
+                                    [height] => 600
+                                    [width] => 901
+                                )
+
+                            [alt] => 
+                            [title] => 
+                            [width] => 901
+                            [height] => 600
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_pdf] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [fid] => 315
+                            [uid] => 1
+                            [filename] => ristorante-gourmet-roma.pdf
+                            [uri] => public://ristorante-gourmet-roma_0.pdf
+                            [filemime] => application/pdf
+                            [filesize] => 106352
+                            [status] => 1
+                            [timestamp] => 1401370177
+                            [type] => document
+                            [rdf_mapping] => Array
+                                (
+                                )
+
+                            [metadata] => Array
+                                (
+                                )
+
+                            [alt] => 
+                            [title] => 
+                            [display] => 1
+                            [description] => 
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_link] => Array
+        (
+        )
+
+    [rdf_mapping] => Array
+        (
+            [rdftype] => Array
+                (
+                    [0] => sioc:Item
+                    [1] => foaf:Document
+                )
+
+            [title] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:title
+                        )
+
+                )
+
+            [created] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:date
+                            [1] => dc:created
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+            [changed] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:modified
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+            [body] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => content:encoded
+                        )
+
+                )
+
+            [uid] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:has_creator
+                        )
+
+                    [type] => rel
+                )
+
+            [name] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => foaf:name
+                        )
+
+                )
+
+            [comment_count] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:num_replies
+                        )
+
+                    [datatype] => xsd:integer
+                )
+
+            [last_activity] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:last_activity_date
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+        )
+
+    [cid] => 0
+    [last_comment_timestamp] => 1396454230
+    [last_comment_name] => 
+    [last_comment_uid] => 1
+    [comment_count] => 0
+    [name] => admin
+    [picture] => 0
+    [data] => b:0;
+)
+
+[17-Jun-2014 10:43:16 UTC] stdClass Object
+(
+    [vid] => 205
+    [uid] => 1
+    [title] => Meet the Chef
+    [log] => 
+    [status] => 1
+    [comment] => 1
+    [promote] => 0
+    [sticky] => 0
+    [nid] => 205
+    [type] => cuisine
+    [language] => en
+    [created] => 1396454303
+    [changed] => 1401371521
+    [tnid] => 205
+    [translate] => 0
+    [revision_timestamp] => 1401371521
+    [revision_uid] => 1
+    [field_hotel] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [target_id] => 23
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_content] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [value] => Rhoncus magna montes. Nunc odio, montes sit, enim et augue nisi. Non porttitor sit, enim ac elementum porttitor, mauris. Urna risus duis odio integer turpis odio pulvinar quis elementum, nec amet et nec quis, nec nec lundium porttitor magna adipiscing diam, et nisi, turpis in pellentesque rhoncus eu nascetur.
+
+Enim. Pid integer ut porttitor proin dapibus sagittis et facilisis sagittis mus adipiscing mauris vel quis parturient lorem integer, magna eu nascetur dapibus in tempor dis elementum facilisis porta! Et massa facilisis massa integer, pulvinar urna! Tincidunt ac arcu odio nec nisi lorem tincidunt integer. Elementum aliquet mauris augue.
+                            [format] => filtered_html
+                            [safe_value] => <p>Rhoncus magna montes. Nunc odio, montes sit, enim et augue nisi. Non porttitor sit, enim ac elementum porttitor, mauris. Urna risus duis odio integer turpis odio pulvinar quis elementum, nec amet et nec quis, nec nec lundium porttitor magna adipiscing diam, et nisi, turpis in pellentesque rhoncus eu nascetur.</p>
+<p>Enim. Pid integer ut porttitor proin dapibus sagittis et facilisis sagittis mus adipiscing mauris vel quis parturient lorem integer, magna eu nascetur dapibus in tempor dis elementum facilisis porta! Et massa facilisis massa integer, pulvinar urna! Tincidunt ac arcu odio nec nisi lorem tincidunt integer. Elementum aliquet mauris augue.</p>
+
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_image] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [fid] => 188
+                            [uid] => 1
+                            [filename] => chef-antonio-vitale.png
+                            [uri] => public://chef-antonio-vitale.png
+                            [filemime] => image/png
+                            [filesize] => 95034
+                            [status] => 1
+                            [timestamp] => 1396454303
+                            [type] => image
+                            [field_file_image_alt_text] => Array
+                                (
+                                )
+
+                            [field_file_image_title_text] => Array
+                                (
+                                )
+
+                            [rdf_mapping] => Array
+                                (
+                                )
+
+                            [metadata] => Array
+                                (
+                                    [height] => 230
+                                    [width] => 200
+                                )
+
+                            [alt] => 
+                            [title] => 
+                            [width] => 200
+                            [height] => 230
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_pdf] => Array
+        (
+        )
+
+    [field_cuisine_link] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [url] => hotel-dinghilterra/our-cuisine#chef
+                            [title] => Our Chef
+                            [attributes] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [rdf_mapping] => Array
+        (
+            [rdftype] => Array
+                (
+                    [0] => sioc:Item
+                    [1] => foaf:Document
+                )
+
+            [title] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:title
+                        )
+
+                )
+
+            [created] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:date
+                            [1] => dc:created
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+            [changed] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:modified
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+            [body] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => content:encoded
+                        )
+
+                )
+
+            [uid] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:has_creator
+                        )
+
+                    [type] => rel
+                )
+
+            [name] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => foaf:name
+                        )
+
+                )
+
+            [comment_count] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:num_replies
+                        )
+
+                    [datatype] => xsd:integer
+                )
+
+            [last_activity] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:last_activity_date
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+        )
+
+    [cid] => 0
+    [last_comment_timestamp] => 1396454303
+    [last_comment_name] => 
+    [last_comment_uid] => 1
+    [comment_count] => 0
+    [name] => admin
+    [picture] => 0
+    [data] => b:0;
+)
+
+[17-Jun-2014 10:43:16 UTC] stdClass Object
+(
+    [vid] => 206
+    [uid] => 1
+    [title] => Our recipes
+    [log] => 
+    [status] => 1
+    [comment] => 1
+    [promote] => 0
+    [sticky] => 0
+    [nid] => 206
+    [type] => cuisine
+    [language] => en
+    [created] => 1396454372
+    [changed] => 1396455407
+    [tnid] => 206
+    [translate] => 0
+    [revision_timestamp] => 1396455407
+    [revision_uid] => 1
+    [field_hotel] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [target_id] => 23
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_content] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [value] => Etiam. Mattis in dictumst enim, ut facilisis est mattis, mauris platea lectus, aenean scelerisque augue hac elementum enim sit? Et, egestas tempor pulvinar, lacus, massa, elementum adipiscing vut tincidunt! Integer! Nisi montes eu, dictumst, arcu elit hac elementum tincidunt phasellus, placerat a nec urna odio, hac a, in lorem.
+
+Penatibus, nisi eu! Cum. Sed porta scelerisque nec augue. Ridiculus ac, diam rhoncus turpis turpis mid, vel vel massa! In parturient hac tincidunt, adipiscing, dignissim, arcu massa mauris cras! Phasellus a et integer, augue, pulvinar, elementum rhoncus placerat nisi scelerisque dapibus in. In amet lundium, sociis adipiscing lectus sagittis.
+                            [format] => filtered_html
+                            [safe_value] => <p>Etiam. Mattis in dictumst enim, ut facilisis est mattis, mauris platea lectus, aenean scelerisque augue hac elementum enim sit? Et, egestas tempor pulvinar, lacus, massa, elementum adipiscing vut tincidunt! Integer! Nisi montes eu, dictumst, arcu elit hac elementum tincidunt phasellus, placerat a nec urna odio, hac a, in lorem.</p>
+<p>Penatibus, nisi eu! Cum. Sed porta scelerisque nec augue. Ridiculus ac, diam rhoncus turpis turpis mid, vel vel massa! In parturient hac tincidunt, adipiscing, dignissim, arcu massa mauris cras! Phasellus a et integer, augue, pulvinar, elementum rhoncus placerat nisi scelerisque dapibus in. In amet lundium, sociis adipiscing lectus sagittis.</p>
+
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_image] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [fid] => 189
+                            [uid] => 1
+                            [filename] => cafe-romano2.jpg
+                            [uri] => public://cafe-romano2_1.jpg
+                            [filemime] => image/jpeg
+                            [filesize] => 117533
+                            [status] => 1
+                            [timestamp] => 1396454372
+                            [type] => image
+                            [field_file_image_alt_text] => Array
+                                (
+                                )
+
+                            [field_file_image_title_text] => Array
+                                (
+                                )
+
+                            [rdf_mapping] => Array
+                                (
+                                )
+
+                            [metadata] => Array
+                                (
+                                    [height] => 413
+                                    [width] => 1307
+                                )
+
+                            [alt] => 
+                            [title] => 
+                            [width] => 1307
+                            [height] => 413
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_pdf] => Array
+        (
+        )
+
+    [field_cuisine_link] => Array
+        (
+        )
+
+    [rdf_mapping] => Array
+        (
+            [rdftype] => Array
+                (
+                    [0] => sioc:Item
+                    [1] => foaf:Document
+                )
+
+            [title] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:title
+                        )
+
+                )
+
+            [created] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:date
+                            [1] => dc:created
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+            [changed] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:modified
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+            [body] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => content:encoded
+                        )
+
+                )
+
+            [uid] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:has_creator
+                        )
+
+                    [type] => rel
+                )
+
+            [name] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => foaf:name
+                        )
+
+                )
+
+            [comment_count] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:num_replies
+                        )
+
+                    [datatype] => xsd:integer
+                )
+
+            [last_activity] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:last_activity_date
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+        )
+
+    [cid] => 0
+    [last_comment_timestamp] => 1396454372
+    [last_comment_name] => 
+    [last_comment_uid] => 1
+    [comment_count] => 0
+    [name] => admin
+    [picture] => 0
+    [data] => b:0;
+)
+
+[17-Jun-2014 10:43:16 UTC] stdClass Object
+(
+    [vid] => 207
+    [uid] => 1
+    [title] => Cooking Classes
+    [log] => 
+    [status] => 1
+    [comment] => 1
+    [promote] => 0
+    [sticky] => 0
+    [nid] => 207
+    [type] => cuisine
+    [language] => en
+    [created] => 1396454529
+    [changed] => 1396455397
+    [tnid] => 207
+    [translate] => 0
+    [revision_timestamp] => 1396455397
+    [revision_uid] => 1
+    [field_hotel] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [target_id] => 23
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_content] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [value] => Lorem et mus etiam tempor a, a nisi nunc ultrices pulvinar et placerat tincidunt, et aliquet porta phasellus urna dictumst hac! Enim vut velit porta cursus parturient. Tempor, penatibus platea, enim vel ut facilisis magnis nisi, vel augue massa? Magna non dictumst amet pulvinar pid sed, ac aliquet, porta elit.
+
+In porttitor dignissim pellentesque non montes. Dapibus in, dapibus? A montes, montes! Lorem est magnis tincidunt parturient purus diam, ridiculus habitasse velit elementum phasellus, dictumst vut vel purus quis, vel tortor ut odio, augue ultricies vel ultricies tempor tristique lundium habitasse, mauris egestas! Est lectus! Augue vel augue amet.
+                            [format] => filtered_html
+                            [safe_value] => <p>Lorem et mus etiam tempor a, a nisi nunc ultrices pulvinar et placerat tincidunt, et aliquet porta phasellus urna dictumst hac! Enim vut velit porta cursus parturient. Tempor, penatibus platea, enim vel ut facilisis magnis nisi, vel augue massa? Magna non dictumst amet pulvinar pid sed, ac aliquet, porta elit.</p>
+<p>In porttitor dignissim pellentesque non montes. Dapibus in, dapibus? A montes, montes! Lorem est magnis tincidunt parturient purus diam, ridiculus habitasse velit elementum phasellus, dictumst vut vel purus quis, vel tortor ut odio, augue ultricies vel ultricies tempor tristique lundium habitasse, mauris egestas! Est lectus! Augue vel augue amet.</p>
+
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_image] => Array
+        (
+            [und] => Array
+                (
+                    [0] => Array
+                        (
+                            [fid] => 190
+                            [uid] => 1
+                            [filename] => ristoranti-pesce-roma.jpg
+                            [uri] => public://ristoranti-pesce-roma_0.jpg
+                            [filemime] => image/jpeg
+                            [filesize] => 98062
+                            [status] => 1
+                            [timestamp] => 1396454529
+                            [type] => image
+                            [field_file_image_alt_text] => Array
+                                (
+                                )
+
+                            [field_file_image_title_text] => Array
+                                (
+                                )
+
+                            [rdf_mapping] => Array
+                                (
+                                )
+
+                            [metadata] => Array
+                                (
+                                    [height] => 600
+                                    [width] => 900
+                                )
+
+                            [alt] => 
+                            [title] => 
+                            [width] => 900
+                            [height] => 600
+                        )
+
+                )
+
+        )
+
+    [field_cuisine_pdf] => Array
+        (
+        )
+
+    [field_cuisine_link] => Array
+        (
+        )
+
+    [rdf_mapping] => Array
+        (
+            [rdftype] => Array
+                (
+                    [0] => sioc:Item
+                    [1] => foaf:Document
+                )
+
+            [title] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:title
+                        )
+
+                )
+
+            [created] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:date
+                            [1] => dc:created
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+            [changed] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => dc:modified
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+            [body] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => content:encoded
+                        )
+
+                )
+
+            [uid] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:has_creator
+                        )
+
+                    [type] => rel
+                )
+
+            [name] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => foaf:name
+                        )
+
+                )
+
+            [comment_count] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:num_replies
+                        )
+
+                    [datatype] => xsd:integer
+                )
+
+            [last_activity] => Array
+                (
+                    [predicates] => Array
+                        (
+                            [0] => sioc:last_activity_date
+                        )
+
+                    [datatype] => xsd:dateTime
+                    [callback] => date_iso8601
+                )
+
+        )
+
+    [cid] => 0
+    [last_comment_timestamp] => 1396454529
+    [last_comment_name] => 
+    [last_comment_uid] => 1
+    [comment_count] => 0
+    [name] => admin
+    [picture] => 0
+    [data] => b:0;
+)
+
